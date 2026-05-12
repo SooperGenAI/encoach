@@ -42,7 +42,7 @@ sections:
         Trainees arrive ready to operate inside an AI-enabled workflow
         environment and take on real, supervised, accountable work for
         the duration of the placement.
-    illustration: diagrams/supervisory-chain.html
+    image: /uploads/illustrations/cuate/collaboration.svg
 
   - eyebrow: What trainees get
     headline: >

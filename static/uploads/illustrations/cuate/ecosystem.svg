@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" fill="none">
+  <!-- background decoration -->
+  <circle cx="50" cy="60" r="4" fill="#dee5ee"/>
+  <circle cx="540" cy="40" r="3" fill="#7fbcbc"/>
+  <circle cx="30" cy="320" r="3" fill="#3d8688"/>
+  <circle cx="570" cy="320" r="4" fill="#dee5ee"/>
+
+  <!-- center platform: Encoach -->
+  <g transform="translate(300 270)">
+    <rect x="-110" y="0" width="220" height="56" rx="6" fill="#0a1628"/>
+    <text x="0" y="20" text-anchor="middle" fill="#7fbcbc" font-family="ui-monospace, monospace" font-size="10" letter-spacing="0.1em">ENCOACH.AI</text>
+    <text x="0" y="38" text-anchor="middle" fill="#fafaf7" font-family="Inter, sans-serif" font-size="13" font-style="italic">Workforce enablement layer</text>
+    <!-- platform base shadow line -->
+    <line x1="-130" y1="60" x2="130" y2="60" stroke="#3d8688" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- left constituency: students -->
+  <g transform="translate(120 130)">
+    <!-- person 1 -->
+    <circle cx="-12" cy="0" r="14" fill="#f4d2a4"/>
+    <path d="M-23 -4 Q-12 -16 -1 -4 L-1 4 Q-12 -8 -23 4 Z" fill="#1a2738"/>
+    <rect x="-22" y="14" width="20" height="32" rx="4" fill="#3d8688"/>
+    <!-- person 2 -->
+    <circle cx="14" cy="0" r="14" fill="#f4d2a4"/>
+    <path d="M3 -4 Q14 -16 25 -4 L25 4 Q14 -8 3 4 Z" fill="#0a1628"/>
+    <rect x="4" y="14" width="20" height="32" rx="4" fill="#7fbcbc"/>
+    <!-- label -->
+    <text x="0" y="70" text-anchor="middle" fill="#3d8688" font-family="ui-monospace, monospace" font-size="10" letter-spacing="0.06em">I</text>
+    <text x="0" y="88" text-anchor="middle" fill="#0a1628" font-family="Inter, sans-serif" font-size="13" font-weight="500">Students &amp; trainees</text>
+    <!-- arrow down to platform -->
+    <line x1="0" y1="100" x2="0" y2="138" stroke="#3d8688" stroke-width="1.5" stroke-dasharray="3 4"/>
+    <path d="M-4 134 L0 140 L4 134" stroke="#3d8688" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+  </g>
+
+  <!-- center constituency: training institutions -->
+  <g transform="translate(300 130)">
+    <!-- building / institute icon -->
+    <rect x="-20" y="-10" width="40" height="36" fill="none" stroke="#3d8688" stroke-width="2"/>
+    <polygon points="-22,-10 0,-26 22,-10" fill="#3d8688"/>
+    <line x1="-13" y1="-10" x2="-13" y2="26" stroke="#3d8688" stroke-width="1.5"/>
+    <line x1="-4" y1="-10" x2="-4" y2="26" stroke="#3d8688" stroke-width="1.5"/>
+    <line x1="5" y1="-10" x2="5" y2="26" stroke="#3d8688" stroke-width="1.5"/>
+    <line x1="14" y1="-10" x2="14" y2="26" stroke="#3d8688" stroke-width="1.5"/>
+    <rect x="-4" y="14" width="8" height="12" fill="#0a1628"/>
+    <!-- label -->
+    <text x="0" y="68" text-anchor="middle" fill="#3d8688" font-family="ui-monospace, monospace" font-size="10" letter-spacing="0.06em">II</text>
+    <text x="0" y="86" text-anchor="middle" fill="#0a1628" font-family="Inter, sans-serif" font-size="13" font-weight="500">Training institutions</text>
+    <line x1="0" y1="98" x2="0" y2="138" stroke="#3d8688" stroke-width="1.5" stroke-dasharray="3 4"/>
+    <path d="M-4 134 L0 140 L4 134" stroke="#3d8688" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+  </g>
+
+  <!-- right constituency: corporates -->
+  <g transform="translate(480 130)">
+    <!-- corporate building icon -->
+    <rect x="-22" y="-14" width="44" height="40" fill="none" stroke="#0a1628" stroke-width="2"/>
+    <line x1="-22" y1="-2" x2="22" y2="-2" stroke="#0a1628" stroke-width="1.5"/>
+    <line x1="-22" y1="10" x2="22" y2="10" stroke="#0a1628" stroke-width="1.5"/>
+    <line x1="-11" y1="-14" x2="-11" y2="26" stroke="#0a1628" stroke-width="1.5"/>
+    <line x1="0" y1="-14" x2="0" y2="26" stroke="#0a1628" stroke-width="1.5"/>
+    <line x1="11" y1="-14" x2="11" y2="26" stroke="#0a1628" stroke-width="1.5"/>
+    <rect x="-22" y="-14" width="44" height="6" fill="#3d8688"/>
+    <!-- label -->
+    <text x="0" y="68" text-anchor="middle" fill="#3d8688" font-family="ui-monospace, monospace" font-size="10" letter-spacing="0.06em">III</text>
+    <text x="0" y="86" text-anchor="middle" fill="#0a1628" font-family="Inter, sans-serif" font-size="13" font-weight="500">Corporate finance</text>
+    <line x1="0" y1="98" x2="0" y2="138" stroke="#3d8688" stroke-width="1.5" stroke-dasharray="3 4"/>
+    <path d="M-4 134 L0 140 L4 134" stroke="#3d8688" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+  </g>
+</svg>

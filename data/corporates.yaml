@@ -6,7 +6,7 @@ hero:
     Operationally trained interns who can work inside modern, AI-enabled
     finance environments from day one — through structured two-month
     corporate placements.
-  illustration: diagrams/supervisor-workspace.html
+  image: /uploads/illustrations/cuate/learning.svg
 
 sections:
   - eyebrows: The supply gap
@@ -16,7 +16,7 @@ sections:
       - >
         The talent pipeline is still shaped around the work of a decade
         ago. Encoach.ai closes that gap on the supply side.
-    illustration: diagrams/transition-illustration.html
+    image: /uploads/illustrations/cuate/shift.svg
 
   - eyebrow: What we deliver
     headline: >
@@ -47,7 +47,7 @@ sections:
         Corporate finance teams, shared services functions, and
         outsourced operations partners who are operationally serious
         about AI — and want a workforce channel that matches.
-    illustration: diagrams/ecosystem-map.html
+    image: /uploads/illustrations/cuate/ecosystem.svg
 
 closing:
   eyebrow: Get in touch

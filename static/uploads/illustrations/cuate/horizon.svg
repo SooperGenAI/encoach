@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" fill="none">
+  <!-- background decoration -->
+  <circle cx="60" cy="50" r="4" fill="#7fbcbc"/>
+  <circle cx="540" cy="50" r="3" fill="#7fbcbc"/>
+  <circle cx="100" cy="80" r="3" fill="#dee5ee"/>
+  <circle cx="500" cy="80" r="3" fill="#dee5ee"/>
+
+  <!-- sun / rising orb in background -->
+  <circle cx="300" cy="180" r="80" fill="#eff7f7" opacity="0.6"/>
+  <circle cx="300" cy="180" r="50" fill="#dee5ee" opacity="0.7"/>
+
+  <!-- horizon line -->
+  <line x1="40" y1="260" x2="560" y2="260" stroke="#3d8688" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- three milestones along the horizon -->
+  <g>
+    <!-- milestone 1: India CA -->
+    <g transform="translate(140 260)">
+      <line x1="0" y1="0" x2="0" y2="-50" stroke="#3d8688" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="6" fill="#3d8688"/>
+      <rect x="-50" y="-100" width="100" height="40" rx="4" fill="#fafaf7" stroke="#0a1628" stroke-width="1.5"/>
+      <text x="0" y="-82" text-anchor="middle" fill="#0a1628" font-family="Inter, sans-serif" font-size="13" font-weight="500">India CA</text>
+      <text x="0" y="-66" text-anchor="middle" fill="#3d8688" font-family="ui-monospace, monospace" font-size="9">TODAY</text>
+    </g>
+
+    <!-- milestone 2: CPA & ACCA -->
+    <g transform="translate(300 260)">
+      <line x1="0" y1="0" x2="0" y2="-80" stroke="#3d8688" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <circle cx="0" cy="0" r="6" fill="#3d8688" opacity="0.85"/>
+      <rect x="-55" y="-130" width="110" height="40" rx="4" fill="#fafaf7" stroke="#0a1628" stroke-width="1.5"/>
+      <text x="0" y="-112" text-anchor="middle" fill="#0a1628" font-family="Inter, sans-serif" font-size="13" font-weight="500">CPA &amp; ACCA</text>
+      <text x="0" y="-96" text-anchor="middle" fill="#3d8688" font-family="ui-monospace, monospace" font-size="9">NEXT HORIZON</text>
+    </g>
+
+    <!-- milestone 3: Global -->
+    <g transform="translate(460 260)">
+      <line x1="0" y1="0" x2="0" y2="-110" stroke="#3d8688" stroke-width="1.5" stroke-dasharray="2 5"/>
+      <circle cx="0" cy="0" r="6" fill="#3d8688" opacity="0.7"/>
+      <rect x="-60" y="-160" width="120" height="40" rx="4" fill="#fafaf7" stroke="#0a1628" stroke-width="1.5"/>
+      <text x="0" y="-142" text-anchor="middle" fill="#0a1628" font-family="Inter, sans-serif" font-size="13" font-weight="500">Global workforce</text>
+      <text x="0" y="-126" text-anchor="middle" fill="#3d8688" font-family="ui-monospace, monospace" font-size="9">LONG HORIZON</text>
+    </g>
+  </g>
+
+  <!-- ground / foreground hints -->
+  <g opacity="0.6">
+    <path d="M 40 260 L 60 285 L 90 270 L 130 290 L 170 275 L 220 290 L 260 280" stroke="#94a3b8" stroke-width="1" fill="none"/>
+    <path d="M 360 280 L 400 290 L 440 275 L 490 290 L 530 285 L 560 290" stroke="#94a3b8" stroke-width="1" fill="none"/>
+  </g>
+
+  <!-- Encoach origin marker -->
+  <g transform="translate(60 260)">
+    <circle cx="0" cy="0" r="4" fill="#0a1628"/>
+    <text x="0" y="22" text-anchor="middle" fill="#525968" font-family="ui-monospace, monospace" font-size="9" letter-spacing="0.08em">ENCOACH.AI</text>
+  </g>
+</svg>

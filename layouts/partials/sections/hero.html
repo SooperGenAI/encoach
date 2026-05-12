@@ -1,9 +1,9 @@
 {{- $d := .data -}}
 <section class="bg-canvas">
-  <div class="container-default pt-24 pb-20 md:pt-32 md:pb-24 lg:pt-40 lg:pb-32">
+  <div class="container-default pt-24 pb-20 md:pt-32 md:pb-24 lg:pt-36 lg:pb-32">
 
-    {{/* Two-column on lg+: content left, supervisor-workspace mockup right */}}
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-y-14 lg:gap-x-12 lg:items-center">
+    {{/* Two-column on lg+: content left, cartoon illustration right */}}
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-x-12 lg:items-center">
 
       <div class="lg:col-span-7">
         <h1 class="font-display text-ink font-normal leading-[1.1] lg:leading-[1.05] tracking-[-0.02em]
@@ -32,15 +32,10 @@
         </div>
       </div>
 
-      {{/* Right column — supervisor workspace mockup (lg+ only) */}}
+      {{/* Right column — cartoon illustration (lg+ only) */}}
       <div class="hidden lg:block lg:col-span-5">
-        {{ partial "diagrams/supervisor-workspace.html" . }}
+        <img src="{{ "/uploads/illustrations/cuate/learning.svg" | relURL }}" alt="" class="w-full h-auto" loading="eager"/>
       </div>
-    </div>
-
-    {{/* Operational flow strip — secondary visual below the hero composition */}}
-    <div class="mt-20 md:mt-24 lg:mt-32 xl:mt-40">
-      {{ partial "diagrams/hero-flow.html" . }}
     </div>
 
   </div>

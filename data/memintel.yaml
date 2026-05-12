@@ -6,7 +6,7 @@ hero:
     Encoach.ai students train on Memintel-Canvas. Not a learning
     sandbox — the same class of platform defining modern AI-enabled
     finance administration.
-  illustration: diagrams/supervisor-workspace.html
+  image: /uploads/illustrations/cuate/collaboration.svg
 
 sections:
   - eyebrow: What it is
@@ -42,7 +42,7 @@ sections:
         AI handles monitoring, reconciliation, coordination, and
         anomaly detection. Humans handle judgement, governance, and
         certification. The platform makes both sides legible to each other.
-    illustration: diagrams/supervisory-chain.html
+    image: /uploads/illustrations/cuate/pathway.svg
 
   - eyebrow: Why we train on it
     headline: >

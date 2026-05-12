@@ -6,7 +6,7 @@ hero:
     Practical training built around the four operational pillars of
     AI-enabled finance work, culminating in a structured corporate
     internship.
-  illustration: diagrams/training-pathway.html
+  image: /uploads/illustrations/cuate/learning.svg
 
 sections:
   - eyebrow: The model
@@ -51,7 +51,7 @@ sections:
         Encoach.ai connects three constituencies — the people entering
         finance work, the institutions preparing them, and the
         organisations hiring them.
-    illustration: diagrams/ecosystem-map.html
+    image: /uploads/illustrations/cuate/ecosystem.svg
 
 closing:
   eyebrow: Next step

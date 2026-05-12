@@ -54,9 +54,13 @@
       </div>
     </div>
 
-    {{ with $d.illustration }}
+    {{ if $d.image }}
+    <div class="mt-16 md:mt-20 lg:mt-24 max-w-3xl mx-auto">
+      <img src="{{ $d.image | relURL }}" alt="" class="w-full h-auto" loading="lazy"/>
+    </div>
+    {{ else if $d.illustration }}
     <div class="mt-16 md:mt-20 lg:mt-24 max-w-4xl mx-auto">
-      {{ partial . $ }}
+      {{ partial $d.illustration $ }}
     </div>
     {{ end }}
   </div>

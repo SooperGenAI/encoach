@@ -20,9 +20,9 @@
       </div>
     </div>
 
-    {{/* Ecosystem map — replaces the previous stacked entries */}}
-    <div class="mt-20 md:mt-24">
-      {{ partial "diagrams/ecosystem-map.html" . }}
+    {{/* Cartoon illustration — three constituencies on the platform */}}
+    <div class="mt-16 md:mt-20 lg:mt-24 max-w-3xl mx-auto">
+      <img src="{{ "/uploads/illustrations/cuate/ecosystem.svg" | relURL }}" alt="" class="w-full h-auto" loading="lazy"/>
     </div>
 
     {{ with $d.closing_note }}
