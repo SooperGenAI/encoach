@@ -1,0 +1,121 @@
+{{/*
+  Hero schematic — supervisor workspace mockup.
+  Editorial line-art UI representation of an operational supervisor's screen.
+  Three columns: workflow queue / active task with AI + supervisor sub-panels / status.
+  Renders on a light surface (hero canvas). Hidden below lg — hero-flow strip
+  handles mobile/tablet.
+*/}}
+<div class="dgm relative bg-paper border border-hairline-strong overflow-hidden">
+
+  {{/* Header bar */}}
+  <div class="flex items-center justify-between px-4 py-3 border-b border-hairline-strong">
+    <div class="flex items-center gap-2.5">
+      <svg viewBox="0 0 12 12" class="w-3 h-3 text-slate-400" aria-hidden="true">
+        <circle cx="3" cy="6" r="1.5" fill="currentColor"/>
+        <circle cx="6" cy="6" r="1.5" fill="currentColor" opacity="0.5"/>
+        <circle cx="9" cy="6" r="1.5" fill="currentColor" opacity="0.3"/>
+      </svg>
+      <span class="text-xs font-medium text-ink leading-none">Supervisor workspace</span>
+    </div>
+    <span class="font-mono text-2xs text-slate-500">Memintel-Canvas</span>
+  </div>
+
+  {{/* Body — 12-col grid: queue 3 / active task 6 / status 3 */}}
+  <div class="grid grid-cols-12 leading-relaxed">
+
+    {{/* Queue */}}
+    <div class="col-span-3 px-3.5 py-4 border-r border-hairline">
+      <p class="text-2xs uppercase tracking-[0.18em] text-slate-500 font-medium">Queue</p>
+      <ul class="mt-3.5 space-y-2.5">
+        <li class="flex items-center gap-2 text-slate-600">
+          <span class="w-1.5 h-1.5 rounded-full border border-slate-400"></span>
+          <span class="font-mono text-2xs">T-401</span>
+        </li>
+        <li class="flex items-center gap-2 text-slate-600">
+          <span class="w-1.5 h-1.5 rounded-full border border-slate-400"></span>
+          <span class="font-mono text-2xs">T-402</span>
+        </li>
+        <li class="flex items-center gap-2 text-ink">
+          <span class="w-1.5 h-1.5 rounded-full bg-teal-600 border border-teal-600"></span>
+          <span class="font-mono text-2xs font-medium">T-403</span>
+          <span class="ml-auto text-2xs text-teal-700 italic">active</span>
+        </li>
+        <li class="flex items-center gap-2 text-slate-600">
+          <span class="w-1.5 h-1.5 rounded-full border border-slate-400"></span>
+          <span class="font-mono text-2xs">T-404</span>
+        </li>
+        <li class="flex items-center gap-2 text-slate-600">
+          <span class="w-1.5 h-1.5 rounded-full border border-slate-400"></span>
+          <span class="font-mono text-2xs">T-405</span>
+        </li>
+      </ul>
+    </div>
+
+    {{/* Active task */}}
+    <div class="col-span-6 px-4 py-4 border-r border-hairline">
+      <p class="text-2xs uppercase tracking-[0.18em] text-slate-500 font-medium">Active task</p>
+      <p class="mt-3 text-sm font-medium text-ink leading-tight">
+        <span class="font-mono text-2xs text-slate-500 mr-1.5">T-403</span>Vendor invoice
+      </p>
+      <p class="text-2xs text-slate-500 mt-0.5">Acme Logistics</p>
+
+      {{/* AI execution panel */}}
+      <div class="mt-3 border border-hairline p-2.5">
+        <div class="flex items-center justify-between">
+          <p class="text-2xs uppercase tracking-[0.18em] text-teal-700 font-medium">AI execution</p>
+          <span class="font-mono text-2xs text-slate-500">0.94</span>
+        </div>
+        <p class="mt-1.5 text-sm text-ink leading-none">&#x20B9;4,82,000</p>
+        <p class="text-2xs text-slate-500 mt-1">Account 4220 &middot; Logistics</p>
+      </div>
+
+      {{/* Supervisor review panel */}}
+      <div class="mt-2 border border-hairline p-2.5">
+        <p class="text-2xs uppercase tracking-[0.18em] text-slate-500 font-medium">Supervisor review</p>
+        <div class="mt-2 flex items-center gap-4 text-2xs text-slate-600">
+          <span class="flex items-center gap-1.5">
+            <span class="block w-2.5 h-2.5 border border-slate-400"></span>
+            <span>Approve</span>
+          </span>
+          <span class="flex items-center gap-1.5">
+            <span class="block w-2.5 h-2.5 border border-slate-400"></span>
+            <span>Escalate</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    {{/* Status */}}
+    <div class="col-span-3 px-3.5 py-4">
+      <p class="text-2xs uppercase tracking-[0.18em] text-slate-500 font-medium">Status</p>
+      <ul class="mt-3.5 space-y-2.5 text-2xs text-slate-600">
+        <li class="flex items-center gap-2">
+          <span class="font-mono">T-401</span>
+          <svg viewBox="0 0 12 12" class="w-3 h-3 text-teal-700 ml-auto" aria-hidden="true">
+            <path d="M2 6 L5 9 L10 3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="font-mono">T-402</span>
+          <svg viewBox="0 0 12 12" class="w-3 h-3 text-teal-700 ml-auto" aria-hidden="true">
+            <path d="M2 6 L5 9 L10 3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="font-mono text-slate-700 font-medium">T-403</span>
+          <span class="ml-auto text-teal-700 italic">in review</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="font-mono">T-404</span>
+          <svg viewBox="0 0 12 12" class="w-3 h-3 text-slate-500 ml-auto" aria-hidden="true">
+            <path d="M6 2 L6 10 M3 5 L6 2 L9 5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="font-mono">T-405</span>
+          <span class="ml-auto block w-1.5 h-1.5 rounded-full border border-slate-400"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
