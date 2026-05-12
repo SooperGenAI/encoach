@@ -1,9 +1,8 @@
 {{- $nav := hugo.Data.nav -}}
 <header class="sticky top-0 z-40 bg-paper/85 backdrop-blur border-b border-hairline">
   <div class="container-default flex items-center justify-between h-16">
-    <a href="{{ "/" | relURL }}" class="flex items-center gap-2.5 group" aria-label="Encoach.ai — Home">
-      {{ partial "logo.html" . }}
-      <span class="font-display text-lg tracking-tight text-ink">Encoach<span class="text-teal-600">.ai</span></span>
+    <a href="{{ "/" | relURL }}" class="inline-flex items-center" aria-label="Encoach.ai — Home">
+      <img src="{{ "/logo.png" | relURL }}" alt="Encoach.ai" class="h-9 w-auto" />
     </a>
 
     <nav class="hidden lg:flex items-center gap-7 xl:gap-9" aria-label="Primary">
