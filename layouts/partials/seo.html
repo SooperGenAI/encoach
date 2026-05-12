@@ -2,6 +2,7 @@
 {{- $title := .title -}}
 {{- $description := .description -}}
 {{- $ogImage := absURL (site.Params.ogImage | default "/og-default.png") -}}
+{{- $ogImageAlt := "Encoach.ai — Preparing the workforce for AI-enabled accounting and finance operations" -}}
 {{- $url := $ctx.Permalink -}}
 
 {{/* Open Graph */}}
@@ -11,6 +12,11 @@
 <meta property="og:description" content="{{ $description }}" />
 <meta property="og:url" content="{{ $url }}" />
 <meta property="og:image" content="{{ $ogImage }}" />
+<meta property="og:image:secure_url" content="{{ $ogImage }}" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="{{ $ogImageAlt }}" />
 <meta property="og:locale" content="en_IN" />
 
 {{/* Twitter Card */}}
@@ -18,6 +24,7 @@
 <meta name="twitter:title" content="{{ $title }}" />
 <meta name="twitter:description" content="{{ $description }}" />
 <meta name="twitter:image" content="{{ $ogImage }}" />
+<meta name="twitter:image:alt" content="{{ $ogImageAlt }}" />
 
 {{/* Structured data — Organization */}}
 {{- $org := dict
@@ -27,5 +34,6 @@
   "url" site.BaseURL
   "description" site.Params.description
   "email" site.Params.contact.email
+  "logo" (absURL "/og-default.png")
 -}}
 <script type="application/ld+json">{{ $org | jsonify (dict "indent" "  ") | safeJS }}</script>

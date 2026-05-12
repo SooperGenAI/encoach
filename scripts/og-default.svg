@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+
+  <!-- Background: brand dark surface -->
+  <rect width="1200" height="630" fill="#2c313c"/>
+
+  <!-- Subtle background grid (very low opacity) -->
+  <g opacity="0.04" fill="#ffffff">
+    <rect x="0" y="100" width="1200" height="1"/>
+    <rect x="0" y="200" width="1200" height="1"/>
+    <rect x="0" y="300" width="1200" height="1"/>
+    <rect x="0" y="400" width="1200" height="1"/>
+    <rect x="0" y="500" width="1200" height="1"/>
+    <rect x="200" y="0" width="1" height="630"/>
+    <rect x="400" y="0" width="1" height="630"/>
+    <rect x="600" y="0" width="1" height="630"/>
+    <rect x="800" y="0" width="1" height="630"/>
+    <rect x="1000" y="0" width="1" height="630"/>
+  </g>
+
+  <!-- Wordmark: Encoach.ai (top-left) -->
+  <g transform="translate(96, 110)">
+    <!-- Logo monogram (rounded square outline + E + teal dot) -->
+    <rect x="0" y="-30" width="44" height="44" rx="7" stroke="#fafaf7" stroke-opacity="0.35" stroke-width="1.5" fill="none"/>
+    <text x="22" y="2" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="500" fill="#fafaf7">E</text>
+    <circle cx="36" cy="8" r="3" fill="#54a0a1"/>
+    <!-- Wordmark text -->
+    <text x="58" y="2" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="500" fill="#fafaf7">Encoach<tspan fill="#7fbcbc">.ai</tspan></text>
+  </g>
+
+  <!-- Eyebrow label -->
+  <text x="96" y="220" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="3" font-weight="500" fill="#9099a8">WORKFORCE INFRASTRUCTURE FOR AI-ENABLED FINANCE</text>
+
+  <!-- Headline (3 lines) -->
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#fafaf7" font-weight="400">
+    <text x="96" y="304" font-size="62">Preparing the workforce</text>
+    <text x="96" y="380" font-size="62">for AI-enabled accounting</text>
+    <text x="96" y="456" font-size="62">and finance operations</text>
+  </g>
+
+  <!-- Footer strip -->
+  <line x1="96" y1="530" x2="240" y2="530" stroke="#54a0a1" stroke-width="2"/>
+  <text x="96" y="566" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#c2c8d3">Practical training and corporate internships for finance professionals</text>
+  <text x="96" y="594" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="2" font-weight="500" fill="#7fbcbc">ENCOACH.AI</text>
+
+  <!-- Right-side schematic: operational flow strip (subtle) -->
+  <g transform="translate(820, 240)" font-family="Helvetica, Arial, sans-serif">
+
+    <!-- Vertical thin rule -->
+    <line x1="0" y1="0" x2="0" y2="320" stroke="#54a0a1" stroke-opacity="0.4" stroke-width="1"/>
+
+    <!-- Stage 1 -->
+    <circle cx="0" cy="20" r="6" fill="#54a0a1"/>
+    <text x="22" y="14" font-size="11" letter-spacing="2" font-weight="500" fill="#7fbcbc">01</text>
+    <text x="22" y="34" font-size="16" font-weight="500" fill="#fafaf7">Workflow intake</text>
+
+    <!-- Stage 2 -->
+    <circle cx="0" cy="120" r="6" fill="#54a0a1" fill-opacity="0.85"/>
+    <text x="22" y="114" font-size="11" letter-spacing="2" font-weight="500" fill="#7fbcbc">02</text>
+    <text x="22" y="134" font-size="16" font-weight="500" fill="#fafaf7">AI execution</text>
+
+    <!-- Stage 3 -->
+    <circle cx="0" cy="220" r="6" fill="#54a0a1" fill-opacity="0.7"/>
+    <text x="22" y="214" font-size="11" letter-spacing="2" font-weight="500" fill="#7fbcbc">03</text>
+    <text x="22" y="234" font-size="16" font-weight="500" fill="#fafaf7">Supervisory review</text>
+
+    <!-- Stage 4 -->
+    <circle cx="0" cy="320" r="6" fill="#54a0a1" fill-opacity="0.55"/>
+    <text x="22" y="314" font-size="11" letter-spacing="2" font-weight="500" fill="#7fbcbc">04</text>
+    <text x="22" y="334" font-size="16" font-weight="500" fill="#fafaf7">Certified output</text>
+
+  </g>
+
+  <!-- Thin border for editorial framing -->
+  <rect x="64" y="64" width="1072" height="502" stroke="#fafaf7" stroke-opacity="0.08" stroke-width="1" fill="none"/>
+
+</svg>
