@@ -1,0 +1,74 @@
+{{/*
+  Transition illustration — §2 Shift
+  Conceptual visualisation of the operational shift:
+  Left: scattered fragmented dots (manual coordination).
+  Right: orchestrated network with hubs (AI-driven).
+  Designed for the dark slate-800 §2 surface.
+*/}}
+<div class="dgm relative">
+  <svg viewBox="0 0 720 280" class="w-full h-auto" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+
+    {{/* Left zone — manual / fragmented */}}
+    <g>
+      {{/* Scattered small dots in irregular grid */}}
+      {{- $rows := slice 0 1 2 3 4 -}}
+      {{- $cols := slice 0 1 2 3 4 5 -}}
+      {{ range $r := $rows }}
+        {{ range $c := $cols }}
+          {{- $cx := add 40 (mul $c 40) -}}
+          {{- $cy := add 80 (mul $r 30) -}}
+          {{- $offset := mod (add (mul $r 7) (mul $c 11)) 12 -}}
+          {{- $finalX := add $cx (sub $offset 6) -}}
+          <circle cx="{{ $finalX }}" cy="{{ $cy }}" r="2.5" fill="#94a3b8" opacity="0.6"/>
+        {{ end }}
+      {{ end }}
+
+      {{/* A few faint connecting lines suggesting fragmented coordination */}}
+      <path d="M 60 95 Q 110 105 170 90 Q 200 75 240 100" stroke="#94a3b8" stroke-width="0.5" fill="none" opacity="0.3"/>
+      <path d="M 80 165 Q 130 180 200 160 Q 230 145 270 175" stroke="#94a3b8" stroke-width="0.5" fill="none" opacity="0.3"/>
+    </g>
+
+    {{/* Middle — transition arrow */}}
+    <g>
+      <path d="M 320 140 L 400 140" stroke="#94a3b8" stroke-width="1" fill="none"/>
+      <path d="M 392 134 L 400 140 L 392 146" stroke="#94a3b8" stroke-width="1" fill="none"/>
+    </g>
+
+    {{/* Right zone — orchestrated network */}}
+    <g>
+      {{/* Central hub */}}
+      <circle cx="580" cy="140" r="24" fill="#1a3a3b" stroke="#54a0a1" stroke-width="1"/>
+      <text x="580" y="144" text-anchor="middle" fill="#7fbcbc" font-family="ui-monospace, monospace" font-size="9">AI</text>
+
+      {{/* Four satellite nodes */}}
+      <circle cx="490" cy="80" r="14" fill="#2c3a4a" stroke="#7fbcbc" stroke-width="1" opacity="0.95"/>
+      <circle cx="670" cy="80" r="14" fill="#2c3a4a" stroke="#7fbcbc" stroke-width="1" opacity="0.95"/>
+      <circle cx="490" cy="200" r="14" fill="#2c3a4a" stroke="#7fbcbc" stroke-width="1" opacity="0.95"/>
+      <circle cx="670" cy="200" r="14" fill="#2c3a4a" stroke="#7fbcbc" stroke-width="1" opacity="0.95"/>
+
+      {{/* Connections from hub to satellites */}}
+      <line x1="556" y1="124" x2="500" y2="91" stroke="#54a0a1" stroke-width="1" opacity="0.75"/>
+      <line x1="604" y1="124" x2="660" y2="91" stroke="#54a0a1" stroke-width="1" opacity="0.75"/>
+      <line x1="556" y1="156" x2="500" y2="189" stroke="#54a0a1" stroke-width="1" opacity="0.75"/>
+      <line x1="604" y1="156" x2="660" y2="189" stroke="#54a0a1" stroke-width="1" opacity="0.75"/>
+
+      {{/* Satellite-to-satellite connections (subtle, suggesting workflow orchestration) */}}
+      <path d="M 504 80 Q 580 50 656 80" stroke="#54a0a1" stroke-width="0.5" fill="none" opacity="0.5"/>
+      <path d="M 504 200 Q 580 230 656 200" stroke="#54a0a1" stroke-width="0.5" fill="none" opacity="0.5"/>
+    </g>
+
+  </svg>
+
+  {{/* Captions below */}}
+  <div class="grid grid-cols-12 mt-2 text-xs">
+    <div class="col-span-5 text-center">
+      <p class="text-2xs uppercase tracking-[0.18em] text-slate-500 font-medium">Manual coordination</p>
+      <p class="mt-1 text-slate-400 italic text-xs">Fragmented, ad hoc</p>
+    </div>
+    <div class="col-span-2"></div>
+    <div class="col-span-5 text-center">
+      <p class="text-2xs uppercase tracking-[0.18em] text-teal-400 font-medium">AI-orchestrated</p>
+      <p class="mt-1 text-slate-400 italic text-xs">Coordinated, supervised</p>
+    </div>
+  </div>
+</div>

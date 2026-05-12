@@ -22,9 +22,14 @@
       </div>
     </div>
 
+    {{/* Conceptual illustration — the training pathway as a visual journey */}}
+    <div class="mt-16 md:mt-20 lg:mt-24 max-w-4xl mx-auto">
+      {{ partial "diagrams/training-pathway.html" . }}
+    </div>
+
     {{/* Three pillars as editorial numbered list — no grid, full vertical rhythm */}}
     {{ with $d.pillars }}
-    <ol class="mt-20 md:mt-28 border-t border-hairline">
+    <ol class="mt-16 md:mt-20 border-t border-hairline">
       {{ range $i, $p := . }}
       <li class="grid grid-cols-12 gap-x-6 lg:gap-x-10 py-12 md:py-16 border-b border-hairline last:border-b-0">
         <div class="col-span-12 md:col-span-2 lg:col-span-2">

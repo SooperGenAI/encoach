@@ -1,7 +1,7 @@
 # ----------------------------------------------------------------------
-# Encoach.ai — Homepage content (editorially compressed)
-# Six sections, calm pacing, prose over bullets.
-# Sentence-case headlines with periods (editorial register).
+# Encoach.ai — Homepage content (tightened)
+# Prose cut by ~50%. One illustration anchors each section in addition
+# to the existing functional schematics.
 # ----------------------------------------------------------------------
 
 hero:
@@ -9,10 +9,8 @@ hero:
     Preparing the workforce for AI-enabled accounting
     and finance operations.
   subhead: >
-    Encoach.ai trains accounting and finance professionals for
-    workflow-driven, AI-assisted finance environments — through
-    practical operational training, workflow exposure, and structured
-    corporate internships.
+    Practical training and corporate internships for finance
+    professionals entering AI-assisted, workflow-driven environments.
   primary_cta:
     label: Apply for cohort
     url: /contact/
@@ -24,23 +22,14 @@ hero:
 shift:
   eyebrow: The industry shift
   headline: >
-    Accounting and finance operations are entering a new operational era.
+    Finance operations are entering a new operational era.
   paragraphs:
     - >
-      Artificial intelligence is changing how businesses operate across
-      industries. Accounting and finance — historically organised
-      around spreadsheet coordination, manual reconciliation, repetitive
-      workflows, and manpower-intensive administration — is now entering
-      the same transition.
+      Spreadsheet coordination, manual reconciliation, and
+      manpower-intensive administration are giving way to AI-assisted
+      systems, workflow-driven processes, and Human + AI collaboration.
     - >
-      Modern finance environments are moving toward AI-assisted
-      operational systems, workflow-driven processes, and Human + AI
-      collaboration. The professional entering this environment needs
-      to understand operational workflows and modern finance
-      infrastructure alongside the foundations of the profession.
-    - >
-      Encoach.ai was created to prepare students and finance
-      professionals for this transition.
+      Encoach.ai prepares finance professionals for this transition.
 
 # ----------------------------------------------------------------------
 model:
@@ -49,41 +38,22 @@ model:
     Traditional finance education is no longer sufficient on its own.
   intro:
     - >
-      Much of accounting and finance education today remains theoretical,
-      examination-oriented, and disconnected from modern operational
-      finance environments. Students graduate with strong conceptual
-      depth but limited exposure to AI-assisted workflows, enterprise
-      finance systems, workflow intelligence, or AI-enabled accounting
-      administration.
-    - >
-      Enterprises increasingly require finance professionals who operate
-      comfortably within workflow-driven environments, operational
-      systems, and Human + AI accounting workflows. The gap between
-      traditional education and operational reality is widening.
-    - >
-      Encoach.ai is designed to bridge that gap — through a practical
-      model built around three operational capabilities.
+      Students graduate with strong fundamentals but limited exposure
+      to AI-assisted workflows and operational finance systems.
+      Encoach.ai bridges that gap through three operational capabilities.
   pillars:
-    - title: AI familiarisation for finance professionals
+    - title: AI familiarisation for finance
       body: >
-        Working comfort with AI in an accounting and finance context — not
-        programming, not model building. The emphasis is on operational
-        use: understanding AI-assisted workflows, Human + AI environments,
-        workflow supervision, and the direction modern finance operations
-        are moving.
-    - title: Operational finance workflow training
+        Working comfort with AI in an accounting and finance context —
+        focused on operational use, not programming.
+    - title: Operational workflow training
       body: >
-        Practical exposure to reconciliation environments, operational
-        coordination, workflow supervision, accounting administration,
-        compliance operations, and operational visibility. The training
-        prioritises operational understanding over theory — students
-        develop instincts for how finance work runs end-to-end.
+        Hands-on exposure to reconciliation, supervision, and
+        workflow-driven finance operations.
     - title: Structured corporate internships
       body: >
-        Real operational placements inside corporate finance functions.
-        Trainees develop enterprise familiarity, workflow understanding,
-        accounting administration practice, and exposure to modern
-        finance environments — bridging classroom and operating reality.
+        Real operational placements inside finance functions —
+        bridging classroom and operating reality.
 
 # ----------------------------------------------------------------------
 operating_model:
@@ -93,20 +63,12 @@ operating_model:
     era of finance.
   paragraphs:
     - >
-      AI systems are increasingly capable of monitoring,
-      reconciliation, workflow coordination, anomaly identification,
-      and operational supervision. Finance operations, however, still
-      require judgement, governance, interpretation, accountability,
-      and oversight.
+      AI handles monitoring, reconciliation, coordination, and anomaly
+      detection. Humans handle judgement, governance, and certification.
     - >
-      The future finance professional will collaborate with AI systems,
-      supervise workflows, interpret operational signals, manage
-      escalations, and operate within AI-assisted finance environments.
-    - >
-      At Encoach.ai, students develop this fluency through hands-on
-      exposure to Memintel-Canvas — an AI-enabled accounting
-      administration platform built around workflow intelligence,
-      operational supervision, and Human + AI accounting operations.
+      Encoach.ai students develop this collaborative fluency through
+      hands-on exposure to Memintel-Canvas — an AI-enabled accounting
+      administration platform.
   capabilities_label: Memintel-Canvas
   capabilities:
     - Workflow intelligence
@@ -122,36 +84,30 @@ operating_model:
 ecosystem:
   eyebrow: The ecosystem
   headline: >
-    Connecting workforce development with real operational finance
-    environments.
+    Connecting workforce development with real operational
+    finance environments.
   intro: >
-    Encoach.ai operates as a structured ecosystem connecting three
-    constituencies — the people entering finance work, the institutions
-    preparing them, and the organisations hiring them.
+    Encoach.ai connects three constituencies — the people entering
+    finance work, the institutions preparing them, and the
+    organisations hiring them.
   entries:
     - label: I
       title: Students and trainees
       body: >
-        CA students, commerce graduates, accounting professionals, and
-        early-career finance trainees — preparing for the operational
-        future of accounting and finance work through practical training,
-        workflow exposure, and AI familiarity.
+        CA students, commerce graduates, and finance trainees preparing
+        for AI-enabled finance work.
     - label: II
       title: Finance training institutions
       body: >
         CA coaching institutes and academic partners modernising their
-        offering with future-ready operational training that complements
-        the core curriculum and differentiates outcomes.
+        offering with operational training.
     - label: III
       title: Corporate finance functions
       body: >
-        Enterprises and shared services teams gaining access to
-        AI-aware finance interns, structured operational support, and a
-        workforce channel into modern workflow-driven accounting
-        environments.
+        Enterprises and shared services teams gaining a channel for
+        AI-ready interns and modern workflow practice.
   closing_note: >
-    The model is built to remain low-friction, operationally practical,
-    and enterprise-friendly.
+    Low-friction, operationally practical, enterprise-friendly.
 
 # ----------------------------------------------------------------------
 closing:
@@ -160,19 +116,13 @@ closing:
     The workforce layer for AI-enabled finance operations.
   paragraphs:
     - >
-      The accounting and finance industry is in the early stages of a
-      substantial operational transformation. The future of finance work
-      will involve AI-assisted workflows, operational intelligence,
-      workflow-driven environments, continuous supervision, and
-      Human + AI collaboration.
-    - >
-      Encoach.ai is being built as the workforce layer for that future.
-      We begin with India's CA ecosystem, extend toward CPA and ACCA
-      pathways, and orient over time toward AI-enabled finance
-      operations delivered from India.
+      Encoach.ai is being built as the workforce layer for the
+      operational future of finance — beginning with India's CA
+      ecosystem and extending toward CPA, ACCA, and global finance
+      workforce pathways.
   audience_line: >
-    For students, training institutions, and corporate finance functions —
-    we would like to hear from you.
+    For students, training institutions, and corporate finance
+    functions — we would like to hear from you.
   primary_cta:
     label: Talk to us
     url: /contact/
