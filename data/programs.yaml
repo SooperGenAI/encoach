@@ -16,6 +16,7 @@ sections:
       - >
         Each program develops the four capabilities that define
         operational readiness in modern finance environments.
+    image: /uploads/illustrations/cuate/pathway.svg
     points:
       - title: AI familiarisation for non-technical finance
         body: >
@@ -42,6 +43,7 @@ sections:
         Every program culminates in a structured corporate internship
         inside a partner finance function — with defined deliverables,
         a supervisory framework, and end-of-placement evaluation.
+    image: /uploads/illustrations/cuate/collaboration.svg
 
   - eyebrow: Who it's for
     headline: >

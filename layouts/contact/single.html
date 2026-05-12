@@ -7,5 +7,7 @@
     {{ partial "sections/page-section.html" (dict "data" $s "index" $i) }}
   {{ end }}
 
-  {{ partial "sections/closing.html" (dict "ctx" . "data" $page.closing) }}
+  {{ $closingIndex := len $page.sections }}
+  {{ $closingSurface := cond (eq (mod $closingIndex 2) 0) "dark" "light" }}
+  {{ partial "sections/closing.html" (dict "ctx" . "data" $page.closing "surface" $closingSurface "index" $closingIndex) }}
 {{ end }}

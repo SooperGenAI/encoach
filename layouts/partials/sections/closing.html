@@ -1,35 +1,58 @@
+{{- /*
+  Closing section — parametric surface and image position.
+  Accepts:
+    - data: the closing content (eyebrow, headline, paragraphs, audience_line, primary_cta)
+    - surface: "dark" (default) | "light" — bg + text scheme
+    - index: integer used to alternate image position with the preceding section.
+             Even index = image LEFT. Odd index = image RIGHT.
+    - ctx: page context (for URL helpers)
+  Homepage call passes no surface/index → defaults (dark + image LEFT) preserve prior look.
+  Inner-page calls pass computed values so closing continues the zigzag from the last section.
+*/ -}}
 {{- $d := .data -}}
-<section class="bg-slate-800 text-slate-300">
-  <div class="container-default py-24 md:py-32 lg:py-40">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-x-16 lg:items-center">
+{{- $surface := .surface | default "dark" -}}
+{{- $index := .index | default 0 -}}
+{{- $dark := eq $surface "dark" -}}
+{{- $imageOnLeft := eq (mod $index 2) 0 -}}
 
-      {{/* Image LEFT */}}
-      <div class="lg:col-span-5">
+{{- $sectionClass  := cond $dark "bg-slate-800 text-slate-300" "bg-canvas" -}}
+{{- $eyebrowClass  := cond $dark "text-slate-400"             "text-slate-500" -}}
+{{- $headlineClass := cond $dark "text-canvas"                "text-ink" -}}
+{{- $bodyClass     := cond $dark "text-slate-300"             "text-slate-700" -}}
+{{- $audienceClass := cond $dark "text-slate-400"             "text-slate-500" -}}
+{{- $btnClass      := cond $dark "btn-light"                  "btn-primary" -}}
+
+<section class="{{ $sectionClass }}">
+  <div class="container-default py-24 md:py-32 lg:py-40">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-x-16 lg:items-start">
+
+      {{/* Image (alternating side) */}}
+      <div class="lg:col-span-5 {{ if not $imageOnLeft }}lg:order-last{{ end }}">
         <img src="{{ "/uploads/illustrations/cuate/horizon.svg" | relURL }}" alt="" class="w-full h-auto" loading="lazy"/>
       </div>
 
-      {{/* Content RIGHT — title, body, audience line, CTA stacked */}}
+      {{/* Content (title, body, audience line, CTA stacked) */}}
       <div class="lg:col-span-7">
         {{ with $d.eyebrow }}
-        <p class="text-2xs font-medium uppercase tracking-[0.2em] text-slate-400">{{ . }}</p>
+        <p class="text-2xs font-medium uppercase tracking-[0.2em] {{ $eyebrowClass }}">{{ . }}</p>
         {{ end }}
-        <h2 class="mt-4 font-display text-canvas font-normal leading-[1.1] tracking-[-0.02em]
-                   text-3xl sm:text-4xl md:text-5xl">
+        <h2 class="mt-4 font-display {{ $headlineClass }} font-normal leading-[1.1] tracking-[-0.02em]
+                   text-3xl sm:text-4xl md:text-5xl max-w-xl">
           {{ $d.headline }}
         </h2>
-        <div class="mt-6 space-y-5 text-base md:text-lg leading-relaxed text-slate-300 max-w-prose">
+        <div class="mt-6 space-y-5 text-base md:text-lg leading-relaxed {{ $bodyClass }} max-w-prose">
           {{ range $d.paragraphs }}
             <p>{{ . }}</p>
           {{ end }}
         </div>
 
         {{ with $d.audience_line }}
-        <p class="mt-10 text-base text-slate-400 max-w-prose">{{ . }}</p>
+        <p class="mt-10 text-base {{ $audienceClass }} max-w-prose">{{ . }}</p>
         {{ end }}
 
         {{ with $d.primary_cta }}
         <div class="mt-6">
-          <a href="{{ .url | relURL }}" class="btn btn-light">
+          <a href="{{ .url | relURL }}" class="btn {{ $btnClass }}">
             {{ .label }}
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
               <path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
