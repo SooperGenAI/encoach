@@ -50,7 +50,11 @@ jobs:
         env:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
-        run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        # Use the baseURL from hugo.toml (https://encoach.ai/) directly.
+        # The configure-pages action's output base_url returns the github.io
+        # project subpath on this runner, which produces asset paths like
+        # /encoach/css/... that 404 on the custom domain.
+        run: hugo --gc --minify --baseURL "https://encoach.ai/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
