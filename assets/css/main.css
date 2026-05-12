@@ -264,6 +264,13 @@
     background: var(--color-canvas);
   }
 
+  /* Light button for use on dark surfaces (closing CTA on slate-800) */
+  .btn-light {
+    background: var(--color-canvas);
+    color: var(--color-ink);
+  }
+  .btn-light:hover { background: #ffffff; }
+
   /* Hairline divider */
   .hairline {
     border-top: 1px solid var(--color-hairline);
