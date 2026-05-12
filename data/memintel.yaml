@@ -1,0 +1,70 @@
+hero:
+  eyebrow: The Training Environment
+  headline: >
+    Memintel-Canvas — the AI-enabled accounting administration platform.
+  lead: >
+    Encoach.ai students train on Memintel-Canvas. Not a learning
+    sandbox — the same class of platform defining modern AI-enabled
+    finance administration.
+  illustration: diagrams/supervisor-workspace.html
+
+sections:
+  - eyebrow: What it is
+    headline: >
+      AI systems, workflow intelligence, and humans in the loop.
+    body:
+      - >
+        Memintel-Canvas brings together four capabilities that, in
+        combination, define what AI-enabled accounting administration
+        looks like.
+    points:
+      - title: AI systems
+        body: >
+          Purpose-built for accounting administration, not retrofitted
+          general-purpose models.
+      - title: Workflow intelligence
+        body: >
+          End-to-end orchestration of finance operations with embedded
+          supervisory checkpoints.
+      - title: Operational supervision
+        body: >
+          Humans certify, AI executes. The supervisory pattern is part
+          of the design.
+      - title: Experts in the loop
+        body: >
+          Domain experts are a designed feature, not a service tier.
+
+  - eyebrow: How it works
+    headline: >
+      Supervisory operating model, by design.
+    body:
+      - >
+        AI handles monitoring, reconciliation, coordination, and
+        anomaly detection. Humans handle judgement, governance, and
+        certification. The platform makes both sides legible to each other.
+    illustration: diagrams/supervisory-chain.html
+
+  - eyebrow: Why we train on it
+    headline: >
+      Operating fluency transfers.
+    body:
+      - >
+        The operating pattern of Memintel-Canvas is the operating
+        pattern of the future finance function. Trainees who become
+        fluent here develop the operational instincts that transfer to
+        any modern AI-enabled finance environment.
+
+closing:
+  eyebrow: Learn more
+  headline: >
+    Want to talk about Memintel-Canvas?
+  paragraphs:
+    - >
+      More on Memintel-Canvas will be published as the platform's
+      public surface develops. To learn more about how it is used in
+      Encoach.ai programs, get in touch.
+  audience_line: >
+    For finance leaders, training partners, and program participants.
+  primary_cta:
+    label: Talk to us
+    url: /contact/

@@ -1,0 +1,65 @@
+hero:
+  eyebrow: For Corporates
+  headline: >
+    Hire AI-ready finance interns.
+  lead: >
+    Operationally trained interns who can work inside modern, AI-enabled
+    finance environments from day one — through structured two-month
+    corporate placements.
+  illustration: diagrams/supervisor-workspace.html
+
+sections:
+  - eyebrows: The supply gap
+    headline: >
+      Finance functions are being rebuilt around AI-enabled workflows.
+    body:
+      - >
+        The talent pipeline is still shaped around the work of a decade
+        ago. Encoach.ai closes that gap on the supply side.
+    illustration: diagrams/transition-illustration.html
+
+  - eyebrow: What we deliver
+    headline: >
+      Operationally trained interns, on a structured framework.
+    body:
+      - >
+        We handle trainee selection, pre-internship preparation, and the
+        supervisory rhythm that makes the placement work for both sides.
+    points:
+      - title: Operationally trained interns
+        body: >
+          Fluent in AI-enabled administration, workflow operations, and
+          supervisory practice.
+      - title: Structured 2-month placements
+        body: >
+          Defined deliverables, supervisory framework, end-of-placement
+          evaluation.
+      - title: A talent channel
+        body: >
+          Direct access to India's CA ecosystem and the broader finance
+          workforce.
+
+  - eyebrow: Who it's for
+    headline: >
+      Finance functions ready to modernise.
+    body:
+      - >
+        Corporate finance teams, shared services functions, and
+        outsourced operations partners who are operationally serious
+        about AI — and want a workforce channel that matches.
+    illustration: diagrams/ecosystem-map.html
+
+closing:
+  eyebrow: Get in touch
+  headline: >
+    Talk to us about hosting interns.
+  paragraphs:
+    - >
+      If your finance function is operationally serious about AI, we
+      should talk. We work with a small number of corporate partners
+      per cohort.
+  audience_line: >
+    For finance leaders, shared services heads, and L&D teams.
+  primary_cta:
+    label: Talk to us
+    url: /contact/

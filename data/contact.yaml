@@ -1,0 +1,42 @@
+hero:
+  eyebrow: Talk to us
+  headline: >
+    We work with students, institutions, and corporates.
+  lead: >
+    Tell us where you are coming from — student, training partner, or
+    corporate finance function — and we'll take it from there.
+
+sections:
+  - eyebrow: How to reach us
+    headline: >
+      Email is the fastest way at this stage.
+    body:
+      - >
+        A structured contact form will be published shortly. In the
+        meantime, a brief email describing where you are coming from is
+        the most reliable route.
+    points:
+      - title: Email
+        body: >
+          hello@encoach.ai
+      - title: LinkedIn
+        body: >
+          Encoach.ai on LinkedIn — linkedin.com/company/encoach-ai
+      - title: Location
+        body: >
+          India
+
+closing:
+  eyebrow: What happens next
+  headline: >
+    A brief, focused conversation.
+  paragraphs:
+    - >
+      We'll respond within two working days. Initial conversations are
+      short and focused — we are at the stage where every conversation
+      shapes how the platform develops.
+  audience_line: >
+    For students, institutes, and corporates — we'd like to hear from you.
+  primary_cta:
+    label: Email hello@encoach.ai
+    url: "mailto:hello@encoach.ai"

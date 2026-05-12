@@ -1,0 +1,11 @@
+{{ define "main" }}
+  {{ $page := hugo.Data.programs }}
+
+  {{ partial "sections/page-hero.html" (dict "data" $page.hero) }}
+
+  {{ range $i, $s := $page.sections }}
+    {{ partial "sections/page-section.html" (dict "data" $s "index" $i) }}
+  {{ end }}
+
+  {{ partial "sections/closing.html" (dict "ctx" . "data" $page.closing) }}
+{{ end }}

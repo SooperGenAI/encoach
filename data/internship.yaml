@@ -1,0 +1,69 @@
+hero:
+  eyebrow: The Internship Model
+  headline: >
+    A real operational placement, not a shadowing exercise.
+  lead: >
+    Every Encoach.ai program culminates in a structured two-month
+    corporate internship inside a real finance function — with defined
+    deliverables and a supervisory rhythm.
+
+sections:
+  - eyebrow: How it's structured
+    headline: >
+      A 12-week arc, classroom to corporate.
+    body:
+      - >
+        Encoach.ai trainees enter the corporate placement having already
+        developed working fluency in AI-enabled accounting administration,
+        workflow-driven operations, and Memintel-Canvas.
+    points:
+      - title: Weeks 1 – 4 · Foundations
+        body: >
+          AI familiarity for finance, workflow vocabulary, supervisory
+          operating model — built through guided practice.
+      - title: Weeks 5 – 8 · Platform fluency
+        body: >
+          Working inside Memintel-Canvas on representative accounting
+          administration workflows under structured supervision.
+      - title: Weeks 9 – 12 · Applied workflows
+        body: >
+          Operating end-to-end finance workflows with increasing
+          autonomy, including exception handling and certification.
+      - title: Weeks 13 – 20 · Corporate placement
+        body: >
+          Two months on-site inside a partner finance function with
+          defined deliverables and a structured feedback loop.
+
+  - eyebrow: What corporates get
+    headline: >
+      An operationally ready intern, from day one.
+    body:
+      - >
+        Trainees arrive ready to operate inside an AI-enabled workflow
+        environment and take on real, supervised, accountable work for
+        the duration of the placement.
+    illustration: diagrams/supervisory-chain.html
+
+  - eyebrow: What trainees get
+    headline: >
+      A documented operational track record at the start of a career.
+    body:
+      - >
+        Not exposure, not theory — a demonstrated operational record
+        inside a real finance function, with corporate evaluation that
+        speaks to hiring teams.
+
+closing:
+  eyebrow: Get involved
+  headline: >
+    Host an intern. Apply for a cohort.
+  paragraphs:
+    - >
+      Corporate finance functions and shared services teams can host
+      operationally ready interns through Encoach.ai's structured
+      internship model.
+  audience_line: >
+    For corporates and trainees — get in touch.
+  primary_cta:
+    label: Talk to us
+    url: /contact/

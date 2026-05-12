@@ -1,0 +1,69 @@
+hero:
+  eyebrow: Programs
+  headline: >
+    Operational training for the AI-enabled finance workforce.
+  lead: >
+    Practical training built around the four operational pillars of
+    AI-enabled finance work, culminating in a structured corporate
+    internship.
+  illustration: diagrams/training-pathway.html
+
+sections:
+  - eyebrow: The model
+    headline: >
+      Four pillars, one practical program.
+    body:
+      - >
+        Each program develops the four capabilities that define
+        operational readiness in modern finance environments.
+    points:
+      - title: AI familiarisation for non-technical finance
+        body: >
+          Working comfort with AI in an accounting and finance
+          context — focused on operational use, not programming.
+      - title: AI-assisted accounting administration
+        body: >
+          Practice with AI-enabled administration, review, exception
+          handling, and certification within structured workflows.
+      - title: Workflow-driven finance operations
+        body: >
+          Operating inside end-to-end finance workflows with their
+          dependencies and supervisory rhythm.
+      - title: Operational finance systems
+        body: >
+          Practical exposure to the systems modern finance functions
+          are being rebuilt on — including Memintel-Canvas.
+
+  - eyebrow: The internship
+    headline: >
+      A two-month corporate placement, not shadowing.
+    body:
+      - >
+        Every program culminates in a structured corporate internship
+        inside a partner finance function — with defined deliverables,
+        a supervisory framework, and end-of-placement evaluation.
+
+  - eyebrow: Who it's for
+    headline: >
+      Built for students, institutions, and corporates.
+    body:
+      - >
+        Encoach.ai connects three constituencies — the people entering
+        finance work, the institutions preparing them, and the
+        organisations hiring them.
+    illustration: diagrams/ecosystem-map.html
+
+closing:
+  eyebrow: Next step
+  headline: >
+    Apply for the upcoming cohort.
+  paragraphs:
+    - >
+      Programs run on rolling cohorts. Get in touch to learn about
+      schedules, scope, and partnership models.
+  audience_line: >
+    For students, institutions, and corporates — talk to us about
+    fit, scope, and timing.
+  primary_cta:
+    label: Talk to us
+    url: /contact/

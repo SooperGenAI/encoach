@@ -1,0 +1,54 @@
+hero:
+  eyebrow: About Encoach.ai
+  headline: >
+    Building the workforce layer for AI-enabled finance operations.
+  lead: >
+    We prepare finance professionals for AI-assisted, workflow-driven
+    operating environments — through practical training and structured
+    corporate internships.
+
+sections:
+  - eyebrow: What we believe
+    headline: >
+      Finance work is becoming Human + AI by default.
+    body:
+      - >
+        AI handles execution. Humans handle judgement, governance, and
+        certification. The professional preparing for this environment
+        needs operational fluency, not theory alone.
+    illustration: diagrams/transition-illustration.html
+
+  - eyebrow: What we do
+    headline: >
+      Three operational capabilities, one practical program.
+    body:
+      - >
+        We combine AI familiarisation, workflow training, and structured
+        corporate internships into a single program built around how
+        modern finance functions actually work.
+    illustration: diagrams/training-pathway.html
+
+  - eyebrow: Where we are headed
+    headline: >
+      From India's CA ecosystem outward.
+    body:
+      - >
+        We begin with India's CA ecosystem and extend over time toward
+        CPA, ACCA, and the global finance workforce.
+    illustration: diagrams/horizon-illustration.html
+
+closing:
+  eyebrow: Get involved
+  headline: >
+    Talk to us about programs, partnerships, or hiring.
+  paragraphs:
+    - >
+      Encoach.ai is being built deliberately and long-term. The
+      conversations we have at this stage shape how the platform
+      develops.
+  audience_line: >
+    For students, training institutions, and corporate finance
+    functions — we would like to hear from you.
+  primary_cta:
+    label: Talk to us
+    url: /contact/
