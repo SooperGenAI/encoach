@@ -1,48 +1,71 @@
 {{/*
-  Generic page section.
-  Auto-alternates light (canvas) and dark (slate-800) based on .index parity.
+  Generic page section — zigzag layout.
+  Auto-alternates:
+    - light/dark surface by index parity (even=dark, odd=light)
+    - image position left/right by index parity (even=image-left, odd=image-right)
+  Title + body stack in the column opposite the image.
+  On mobile, image always shows first, content below.
   Accepts:
     - eyebrow (optional)
     - headline
     - body (array of paragraph strings)
-    - illustration (optional partial name, e.g. "diagrams/training-pathway.html")
-    - surface (optional override: "light" | "dark") — defaults to alternation by index
+    - points (optional array of {title, body} objects)
+    - image (optional path to SVG/PNG)
+    - illustration (optional partial name, alternative to image)
+    - surface (optional override: "light" | "dark")
 */}}
 {{- $d := .data -}}
 {{- $i := .index | default 0 -}}
 {{- $surface := $d.surface | default (cond (eq (mod $i 2) 0) "dark" "light") -}}
 {{- $dark := eq $surface "dark" -}}
+{{- $imageOnLeft := eq (mod $i 2) 0 -}}
+{{- $hasVisual := or $d.image $d.illustration -}}
 
 {{- $sectionClass := cond $dark "bg-slate-800 text-slate-300" "bg-canvas" -}}
 {{- $eyebrowClass := cond $dark "text-slate-400" "text-slate-500" -}}
 {{- $headlineClass := cond $dark "text-canvas" "text-ink" -}}
 {{- $bodyClass := cond $dark "text-slate-300" "text-slate-700" -}}
+{{- $pointMonoClass := cond $dark "text-teal-400" "text-teal-700" -}}
 
 <section class="{{ $sectionClass }}">
   <div class="container-default py-20 md:py-28 lg:py-32">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-x-16 lg:items-center">
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-y-10 lg:gap-x-16">
-      <div class="lg:col-span-5">
+      {{ if $hasVisual }}
+      {{/* Image column — first in markup so mobile shows visual at top */}}
+      <div class="lg:col-span-5 {{ if not $imageOnLeft }}lg:order-last{{ end }}">
+        {{ if $d.image }}
+          <img src="{{ $d.image | relURL }}" alt="" class="w-full h-auto" loading="lazy"/>
+        {{ else if $d.illustration }}
+          {{ partial $d.illustration $ }}
+        {{ end }}
+      </div>
+      {{ end }}
+
+      {{/* Content column — title with body stacked directly below */}}
+      <div class="lg:col-span-7
+                  {{ if not $hasVisual }}{{ if $imageOnLeft }}lg:col-start-6{{ end }}{{ end }}">
         {{ with $d.eyebrow }}
         <p class="text-2xs font-medium uppercase tracking-[0.2em] {{ $eyebrowClass }}">{{ . }}</p>
         {{ end }}
-        <h2 class="mt-5 font-display {{ $headlineClass }} font-normal leading-[1.1] tracking-[-0.02em]
+        <h2 class="mt-4 font-display {{ $headlineClass }} font-normal leading-[1.1] tracking-[-0.02em]
                    text-3xl sm:text-4xl md:text-5xl">
           {{ $d.headline }}
         </h2>
-      </div>
-      <div class="lg:col-span-7 lg:pt-3">
-        <div class="max-w-2xl space-y-6 text-base md:text-lg leading-relaxed {{ $bodyClass }}">
-          {{ range $d.body }}
+
+        {{ with $d.body }}
+        <div class="mt-6 space-y-5 text-base md:text-lg leading-relaxed {{ $bodyClass }} max-w-prose">
+          {{ range . }}
             <p>{{ . }}</p>
           {{ end }}
         </div>
+        {{ end }}
 
         {{ with $d.points }}
-        <ul class="mt-10 space-y-5 text-base md:text-lg leading-relaxed {{ $bodyClass }} max-w-2xl">
+        <ul class="mt-8 space-y-5 text-base leading-relaxed {{ $bodyClass }} max-w-prose">
           {{ range $j, $p := . }}
           <li class="flex gap-4 items-baseline">
-            <span class="font-mono text-xs {{ $eyebrowClass }} shrink-0 mt-1">{{ printf "%02d" (add $j 1) }}</span>
+            <span class="font-mono text-xs {{ $pointMonoClass }} shrink-0 mt-1">{{ printf "%02d" (add $j 1) }}</span>
             <div>
               {{ with $p.title }}<p class="font-medium {{ $headlineClass }}">{{ . }}</p>{{ end }}
               {{ with $p.body }}<p class="mt-1 text-sm md:text-base">{{ . }}</p>{{ end }}
@@ -52,16 +75,7 @@
         </ul>
         {{ end }}
       </div>
-    </div>
 
-    {{ if $d.image }}
-    <div class="mt-16 md:mt-20 lg:mt-24 max-w-3xl mx-auto">
-      <img src="{{ $d.image | relURL }}" alt="" class="w-full h-auto" loading="lazy"/>
     </div>
-    {{ else if $d.illustration }}
-    <div class="mt-16 md:mt-20 lg:mt-24 max-w-4xl mx-auto">
-      {{ partial $d.illustration $ }}
-    </div>
-    {{ end }}
   </div>
 </section>

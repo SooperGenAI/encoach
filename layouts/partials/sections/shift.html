@@ -1,29 +1,29 @@
 {{- $d := .data -}}
 <section class="bg-slate-800 text-slate-300">
   <div class="container-default py-24 md:py-32 lg:py-40">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-y-10 lg:gap-x-16">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-x-16 lg:items-center">
+
+      {{/* Image LEFT */}}
       <div class="lg:col-span-5">
+        <img src="{{ "/uploads/illustrations/cuate/shift.svg" | relURL }}" alt="" class="w-full h-auto" loading="lazy"/>
+      </div>
+
+      {{/* Content RIGHT — title with body directly below */}}
+      <div class="lg:col-span-7">
         {{ with $d.eyebrow }}
         <p class="text-2xs font-medium uppercase tracking-[0.2em] text-slate-400">{{ . }}</p>
         {{ end }}
-        <h2 class="mt-5 font-display text-canvas font-normal leading-[1.1] tracking-[-0.02em]
+        <h2 class="mt-4 font-display text-canvas font-normal leading-[1.1] tracking-[-0.02em]
                    text-3xl sm:text-4xl md:text-5xl">
           {{ $d.headline }}
         </h2>
-      </div>
-
-      <div class="lg:col-span-7 lg:pt-3">
-        <div class="max-w-2xl space-y-6 text-base md:text-lg leading-relaxed text-slate-300">
+        <div class="mt-6 space-y-5 text-base md:text-lg leading-relaxed text-slate-300 max-w-prose">
           {{ range $d.paragraphs }}
             <p>{{ . }}</p>
           {{ end }}
         </div>
       </div>
-    </div>
 
-    {{/* Cartoon illustration — operational shift */}}
-    <div class="mt-16 md:mt-20 lg:mt-24 max-w-3xl mx-auto">
-      <img src="{{ "/uploads/illustrations/cuate/shift.svg" | relURL }}" alt="" class="w-full h-auto" loading="lazy"/>
     </div>
   </div>
 </section>
