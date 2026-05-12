@@ -28,7 +28,7 @@
 
       {{/* Image (alternating side) */}}
       <div class="lg:col-span-5 {{ if not $imageOnLeft }}lg:order-last{{ end }}">
-        <img src="{{ "/uploads/illustrations/cuate/horizon.svg" | relURL }}" alt="" class="w-full h-auto" loading="lazy"/>
+        <img src="{{ "/uploads/illustrations/cuate/vision.svg" | relURL }}" alt="" class="w-full h-auto" loading="lazy"/>
       </div>
 
       {{/* Content (title, body, audience line, CTA stacked) */}}
@@ -38,7 +38,7 @@
         {{ end }}
         <h2 class="mt-4 font-display {{ $headlineClass }} font-normal leading-[1.1] tracking-[-0.02em]
                    text-3xl sm:text-4xl md:text-5xl max-w-xl">
-          {{ $d.headline }}
+          {{ $d.headline | chomp | strings.TrimSuffix "." }}
         </h2>
         <div class="mt-6 space-y-5 text-base md:text-lg leading-relaxed {{ $bodyClass }} max-w-prose">
           {{ range $d.paragraphs }}

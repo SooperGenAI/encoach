@@ -14,7 +14,7 @@
         {{ end }}
         <h1 class="mt-5 font-display text-ink font-normal leading-[1.1] lg:leading-[1.05] tracking-[-0.02em]
                    text-[2.25rem] sm:text-5xl md:text-6xl lg:text-[3.5rem] xl:text-[4rem]">
-          {{ $d.headline }}
+          {{ $d.headline | chomp | strings.TrimSuffix "." }}
         </h1>
         {{ with $d.lead }}
         <p class="mt-8 text-lg md:text-xl text-slate-700 leading-relaxed max-w-2xl">{{ . }}</p>

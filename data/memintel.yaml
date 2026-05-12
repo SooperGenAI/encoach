@@ -17,7 +17,7 @@ sections:
         Memintel-Canvas brings together four capabilities that, in
         combination, define what AI-enabled accounting administration
         looks like.
-    image: /uploads/illustrations/cuate/shift.svg
+    image: /uploads/illustrations/cuate/data.svg
     points:
       - title: AI systems
         body: >
@@ -43,7 +43,7 @@ sections:
         AI handles monitoring, reconciliation, coordination, and
         anomaly detection. Humans handle judgement, governance, and
         certification. The platform makes both sides legible to each other.
-    image: /uploads/illustrations/cuate/pathway.svg
+    image: /uploads/illustrations/cuate/process.svg
 
   - eyebrow: Why we train on it
     headline: >
@@ -54,7 +54,7 @@ sections:
         pattern of the future finance function. Trainees who become
         fluent here develop the operational instincts that transfer to
         any modern AI-enabled finance environment.
-    image: /uploads/illustrations/cuate/horizon.svg
+    image: /uploads/illustrations/cuate/growth.svg
 
 closing:
   eyebrow: Learn more

@@ -8,7 +8,7 @@
       <div class="lg:col-span-7">
         <h1 class="font-display text-ink font-normal leading-[1.1] lg:leading-[1.05] tracking-[-0.02em]
                    text-[2.25rem] sm:text-5xl md:text-6xl lg:text-[3.75rem] xl:text-7xl">
-          {{ $d.headline }}
+          {{ $d.headline | chomp | strings.TrimSuffix "." }}
         </h1>
 
         {{ with $d.subhead }}
