@@ -70,7 +70,7 @@
                          {{ if $dark }}bg-canvas text-slate-800{{ else }}bg-slate-800 text-canvas{{ end }}">
               {{ printf "%02d" (add $j 1) }}
             </span>
-            <div class="flex-1 pt-2">
+            <div class="flex-1">
               {{ with $p.title }}<p class="font-medium {{ $headlineClass }}">{{ . }}</p>{{ end }}
               {{ with $p.body }}<p class="mt-1 text-sm md:text-base">{{ . }}</p>{{ end }}
             </div>
