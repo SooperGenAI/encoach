@@ -32,9 +32,11 @@
       {{ range $i, $p := . }}
       <li class="grid grid-cols-12 gap-x-6 lg:gap-x-10 py-10 md:py-14 border-b border-hairline last:border-b-0">
         <div class="col-span-12 md:col-span-2 lg:col-span-2">
-          <p class="font-mono text-xs text-slate-500 tracking-[0.08em]">
+          <span class="inline-flex items-center justify-center w-12 h-12
+                       font-mono text-sm font-medium tracking-wide
+                       bg-slate-800 text-canvas">
             {{ printf "%02d" (add $i 1) }}
-          </p>
+          </span>
         </div>
         <div class="col-span-12 md:col-span-10 lg:col-span-9 lg:col-start-3">
           <h3 class="font-display text-ink font-normal leading-[1.2] tracking-[-0.015em]
