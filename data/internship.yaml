@@ -3,46 +3,53 @@ hero:
   headline: >
     A real operational placement, not a shadowing exercise.
   lead: >
-    Every Encoach.ai program culminates in a structured two-month
-    corporate internship inside a real finance function — with defined
-    deliverables and a supervisory rhythm.
+    Encoach.ai runs a 12-week internship-integrated program — 4 weeks
+    of intensive training followed by 8 weeks of corporate internship,
+    with parallel supplementary coursework throughout.
 
 sections:
   - eyebrow: How it's structured
     headline: >
-      A 12-week arc, classroom to corporate.
+      A 12-week internship-integrated arc.
     body:
       - >
-        Encoach.ai trainees enter the corporate placement having already
-        developed working fluency in AI-enabled accounting administration,
-        workflow-driven operations, and Memintel-Canvas.
+        Students become workplace-ready within 4 weeks and then continue
+        learning while embedded inside real corporate finance operations.
+      - >
+        Intensive foundations and platform training compress operational
+        fluency into the first month. Corporate placement begins in week 5
+        and runs alongside continuing coursework — so trainees apply what
+        they learn inside live finance functions rather than rehearsing it
+        in a classroom.
     image: /uploads/illustrations/cuate/process.svg
     points:
-      - title: Weeks 1 – 4 · Foundations
+      - title: Weeks 1 – 4 · Foundations & platform training
         body: >
-          AI familiarity for finance, workflow vocabulary, supervisory
-          operating model — built through guided practice.
-      - title: Weeks 5 – 8 · Platform fluency
+          Intensive training in AI-enabled accounting operations, workflow
+          systems, finance administration processes, and practical usage
+          of Memintel-Canvas through guided exercises and supervised
+          simulations.
+      - title: Weeks 5 – 8 · Internship + applied learning
         body: >
-          Working inside Memintel-Canvas on representative accounting
-          administration workflows under structured supervision.
-      - title: Weeks 9 – 12 · Applied workflows
+          Students begin corporate internship placements while continuing
+          structured supplementary coursework focused on workflow
+          execution, exception handling, reporting, and operational
+          coordination.
+      - title: Weeks 9 – 12 · Advanced internship & operational fluency
         body: >
-          Operating end-to-end finance workflows with increasing
-          autonomy, including exception handling and certification.
-      - title: Weeks 13 – 20 · Corporate placement
-        body: >
-          Two months on-site inside a partner finance function with
-          defined deliverables and a structured feedback loop.
+          Participants operate with increasing autonomy inside partner
+          finance teams while attending parallel advanced sessions on
+          AI-assisted accounting administration, workflow optimisation,
+          and enterprise operating practices.
 
   - eyebrow: What corporates get
     headline: >
       An operationally ready intern, from day one.
     body:
       - >
-        Trainees arrive ready to operate inside an AI-enabled workflow
-        environment and take on real, supervised, accountable work for
-        the duration of the placement.
+        Trainees arrive at the corporate placement in week 5 already
+        fluent in AI-enabled workflow operations. They take on real,
+        supervised, accountable work for the eight weeks that follow.
     image: /uploads/illustrations/cuate/collaboration.svg
 
   - eyebrow: What trainees get
@@ -51,8 +58,9 @@ sections:
     body:
       - >
         Not exposure, not theory — a demonstrated operational record
-        inside a real finance function, with corporate evaluation that
-        speaks to hiring teams.
+        inside a real finance function, built through eight weeks of
+        embedded placement alongside continuing coursework, with
+        corporate evaluation that speaks to hiring teams.
     image: /uploads/illustrations/cuate/growth.svg
 
 closing:
@@ -62,8 +70,8 @@ closing:
   paragraphs:
     - >
       Corporate finance functions and shared services teams can host
-      operationally ready interns through Encoach.ai's structured
-      internship model.
+      operationally ready interns through Encoach.ai's 12-week
+      internship-integrated program.
   audience_line: >
     For corporates and trainees — get in touch.
   primary_cta:
