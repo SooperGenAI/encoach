@@ -1,0 +1,63 @@
+{{/*
+  Supervisory chain — visualises the Human + AI operating model.
+  Two horizontal bands stacked vertically. Bidirectional flow indicators
+  between them show oversight downward, escalation upward.
+  Rendered against the dark §4 background (.on-dark scope set by parent).
+*/}}
+<div class="dgm on-dark text-slate-300">
+
+  {{/* Top band — Human supervisory layer */}}
+  <div class="flex items-baseline gap-3">
+    <p class="dgm-label" style="color: var(--color-teal-400);">Human</p>
+    <span class="text-2xs text-slate-400 tracking-wider uppercase">Supervisory layer</span>
+  </div>
+
+  <div class="mt-4 grid grid-cols-4 gap-px bg-white/15">
+    {{- $human := slice
+      (dict "n" "01" "t" "Review")
+      (dict "n" "02" "t" "Judgement")
+      (dict "n" "03" "t" "Certification")
+      (dict "n" "04" "t" "Governance")
+    -}}
+    {{ range $human }}
+    <div class="bg-ink px-3 py-4 sm:px-4 sm:py-5">
+      <p class="dgm-num" style="color: rgba(84, 160, 161, 0.7);">{{ .n }}</p>
+      <p class="dgm-node-title mt-2" style="color: var(--color-canvas);">{{ .t }}</p>
+    </div>
+    {{ end }}
+  </div>
+
+  {{/* Flow indicators — oversight ↓ / escalation ↑ */}}
+  <div class="my-3 grid grid-cols-4">
+    {{ range $i, $_ := seq 4 }}
+    <div class="flex items-center justify-center text-teal-400/60">
+      <svg viewBox="0 0 18 28" class="w-3 h-6" aria-hidden="true">
+        <path d="M5 0 L5 24 M2 21 L5 24 L8 21" stroke="currentColor"/>
+        <path d="M13 28 L13 4 M10 7 L13 4 L16 7" stroke="currentColor"/>
+      </svg>
+    </div>
+    {{ end }}
+  </div>
+
+  {{/* Bottom band — AI execution layer */}}
+  <div class="grid grid-cols-4 gap-px bg-white/15">
+    {{- $ai := slice
+      (dict "n" "01" "t" "Monitoring")
+      (dict "n" "02" "t" "Reconciliation")
+      (dict "n" "03" "t" "Coordination")
+      (dict "n" "04" "t" "Anomaly detection")
+    -}}
+    {{ range $ai }}
+    <div class="bg-ink px-3 py-4 sm:px-4 sm:py-5">
+      <p class="dgm-num" style="color: rgba(195, 200, 211, 0.5);">{{ .n }}</p>
+      <p class="dgm-node-title mt-2" style="color: var(--color-slate-200);">{{ .t }}</p>
+    </div>
+    {{ end }}
+  </div>
+
+  <div class="mt-4 flex items-baseline gap-3">
+    <p class="dgm-label" style="color: var(--color-slate-400);">AI</p>
+    <span class="text-2xs text-slate-500 tracking-wider uppercase">Execution layer</span>
+  </div>
+
+</div>

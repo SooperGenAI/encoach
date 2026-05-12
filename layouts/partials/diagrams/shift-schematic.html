@@ -1,0 +1,53 @@
+{{/*
+  Shift schematic — visualises the operational transition.
+  Left column: traditional finance ops. Right column: AI-enabled finance ops.
+  Four matched pairs connected by hairline + chevron.
+*/}}
+<div class="dgm text-slate-700">
+
+  {{/* Column headers */}}
+  <div class="grid grid-cols-12 gap-x-4 sm:gap-x-8">
+    <div class="col-span-5 text-right">
+      <p class="dgm-label">From</p>
+      <p class="mt-2 text-sm text-slate-500 italic">Traditional finance operations</p>
+    </div>
+    <div class="col-span-2"></div>
+    <div class="col-span-5">
+      <p class="dgm-label">To</p>
+      <p class="mt-2 text-sm text-slate-500 italic">AI-enabled finance operations</p>
+    </div>
+  </div>
+
+  {{/* Top rule under both columns */}}
+  <div class="grid grid-cols-12 gap-x-4 sm:gap-x-8 mt-4">
+    <div class="col-span-5 border-t border-hairline-strong"></div>
+    <div class="col-span-2"></div>
+    <div class="col-span-5 border-t border-hairline-strong"></div>
+  </div>
+
+  {{/* Paired rows */}}
+  {{- $pairs := slice
+    (dict "from" "Spreadsheet coordination" "to" "AI-assisted operational systems")
+    (dict "from" "Manual reconciliation" "to" "Workflow-driven processes")
+    (dict "from" "Repetitive operational workflows" "to" "Continuous supervision")
+    (dict "from" "Manpower-intensive administration" "to" "Human + AI collaboration")
+  -}}
+
+  {{ range $i, $p := $pairs }}
+  <div class="grid grid-cols-12 gap-x-4 sm:gap-x-8 items-center py-5 border-b border-hairline last:border-b-0">
+    <div class="col-span-5 text-right">
+      <p class="text-sm sm:text-base text-slate-500 leading-snug">{{ $p.from }}</p>
+    </div>
+    <div class="col-span-2 flex items-center justify-center text-slate-400">
+      <svg viewBox="0 0 64 12" class="w-full h-3 max-w-[64px]" aria-hidden="true">
+        <path d="M2 6 L54 6" stroke="currentColor"/>
+        <path d="M50 2 L54 6 L50 10" stroke="currentColor"/>
+      </svg>
+    </div>
+    <div class="col-span-5">
+      <p class="text-sm sm:text-base text-ink leading-snug">{{ $p.to }}</p>
+    </div>
+  </div>
+  {{ end }}
+
+</div>

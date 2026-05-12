@@ -1,6 +1,6 @@
 {{- $d := .data -}}
 <section class="bg-canvas border-b border-hairline">
-  <div class="container-default pt-28 pb-28 md:pt-36 md:pb-36 lg:pt-48 lg:pb-48">
+  <div class="container-default pt-28 pb-24 md:pt-36 md:pb-28 lg:pt-48 lg:pb-36">
     <div class="max-w-4xl">
       <h1 class="font-display text-ink font-normal leading-[1.1] lg:leading-[1.05] tracking-[-0.02em]
                  text-[2.25rem] sm:text-5xl md:text-6xl lg:text-7xl">
@@ -26,6 +26,11 @@
           <a href="{{ .url | relURL }}" class="btn btn-secondary">{{ .label }}</a>
         {{ end }}
       </div>
+    </div>
+
+    {{/* Operational flow strip — visual anchor at the close of the hero */}}
+    <div class="mt-24 md:mt-32 lg:mt-40">
+      {{ partial "diagrams/hero-flow.html" . }}
     </div>
   </div>
 </section>

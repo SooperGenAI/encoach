@@ -1,0 +1,51 @@
+{{/*
+  Hero — operational flow strip.
+  Four-node horizontal schematic of the supervisory model.
+  Mobile: vertical stack. Desktop: horizontal flow with chevron connectors.
+*/}}
+<div class="dgm text-slate-700">
+  <div class="flex items-baseline gap-3 mb-8">
+    <span class="dgm-label">The operational flow</span>
+    <span class="flex-1 h-px bg-hairline mt-2"></span>
+  </div>
+
+  <ol class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-0">
+
+    <li class="relative lg:pr-12">
+      <p class="dgm-num">01</p>
+      <h3 class="dgm-node-title mt-3">Workflow intake</h3>
+      <p class="dgm-node-body mt-1.5 max-w-[14rem]">Operational task enters the supervisory workflow.</p>
+      <svg viewBox="0 0 56 12" class="hidden lg:block absolute top-1 right-3 w-12 h-3 text-slate-400" aria-hidden="true">
+        <path d="M0 6 L48 6" stroke="currentColor"/>
+        <path d="M44 2 L48 6 L44 10" stroke="currentColor"/>
+      </svg>
+    </li>
+
+    <li class="relative lg:pr-12">
+      <p class="dgm-num">02</p>
+      <h3 class="dgm-node-title mt-3">AI execution</h3>
+      <p class="dgm-node-body mt-1.5 max-w-[14rem]">AI systems run the operational task within defined guardrails.</p>
+      <svg viewBox="0 0 56 12" class="hidden lg:block absolute top-1 right-3 w-12 h-3 text-slate-400" aria-hidden="true">
+        <path d="M0 6 L48 6" stroke="currentColor"/>
+        <path d="M44 2 L48 6 L44 10" stroke="currentColor"/>
+      </svg>
+    </li>
+
+    <li class="relative lg:pr-12">
+      <p class="dgm-num">03</p>
+      <h3 class="dgm-node-title mt-3">Supervisory review</h3>
+      <p class="dgm-node-body mt-1.5 max-w-[14rem]">A human reviews, interprets, and exercises judgement.</p>
+      <svg viewBox="0 0 56 12" class="hidden lg:block absolute top-1 right-3 w-12 h-3 text-slate-400" aria-hidden="true">
+        <path d="M0 6 L48 6" stroke="currentColor"/>
+        <path d="M44 2 L48 6 L44 10" stroke="currentColor"/>
+      </svg>
+    </li>
+
+    <li class="relative">
+      <p class="dgm-num">04</p>
+      <h3 class="dgm-node-title mt-3">Certified output</h3>
+      <p class="dgm-node-body mt-1.5 max-w-[14rem]">Result is signed off and committed to the system of record.</p>
+    </li>
+
+  </ol>
+</div>

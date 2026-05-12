@@ -290,4 +290,47 @@
     color: var(--color-slate-500);
     letter-spacing: 0.04em;
   }
+
+  /* ----- Operational diagram primitives -----
+   * Editorial line-art register. No fills, no shadows, no gradients.
+   * 1px strokes via currentColor so diagrams adapt to light/dark surfaces.
+   */
+  .dgm-label {
+    font-family: var(--font-sans);
+    font-size: var(--text-2xs);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--color-slate-500);
+    line-height: 1.2;
+  }
+  .dgm-num {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    color: var(--color-slate-500);
+    line-height: 1;
+  }
+  .dgm-node-title {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--color-ink);
+  }
+  .dgm-node-body {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    line-height: 1.5;
+    color: var(--color-slate-500);
+  }
+  /* On dark surfaces — used via the .on-dark scope */
+  .on-dark .dgm-label { color: var(--color-slate-400); }
+  .on-dark .dgm-num { color: var(--color-teal-400); opacity: 0.7; }
+  .on-dark .dgm-node-title { color: var(--color-canvas); }
+  .on-dark .dgm-node-body { color: var(--color-slate-400); }
+
+  /* SVG defaults inside diagrams */
+  .dgm svg { display: block; }
+  .dgm svg [stroke="currentColor"] { stroke-width: 1; fill: none; }
 }

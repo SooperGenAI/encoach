@@ -1,0 +1,51 @@
+{{/*
+  Ecosystem map — three constituencies sitting on the Encoach workforce
+  enablement layer. Typographic three-column composition with hairline
+  connectors meeting at the platform tier below.
+*/}}
+<div class="dgm text-slate-700">
+
+  {{/* Three constituency columns */}}
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-x-8 lg:gap-x-12">
+
+    {{- $entries := slice
+      (dict "n" "I" "t" "Students and trainees" "b" "CA students, commerce graduates, accounting professionals, and finance trainees — preparing for AI-enabled finance work.")
+      (dict "n" "II" "t" "Finance training institutions" "b" "CA coaching institutes and academic partners modernising their offering with operational training that differentiates outcomes.")
+      (dict "n" "III" "t" "Corporate finance functions" "b" "Enterprises and shared services teams gaining a channel for AI-ready interns and exposure to modern workflow practice.")
+    -}}
+
+    {{ range $entries }}
+    <div class="relative pb-12 md:pb-14">
+      <p class="dgm-num">{{ .n }}</p>
+      <h3 class="mt-3 font-display text-ink font-normal leading-tight text-xl md:text-2xl">{{ .t }}</h3>
+      <p class="mt-4 text-sm text-slate-600 leading-relaxed max-w-md">{{ .b }}</p>
+
+      {{/* Vertical drop into the platform tier */}}
+      <svg viewBox="0 0 12 48" class="absolute left-0 bottom-0 w-3 h-12 text-slate-400" aria-hidden="true">
+        <path d="M6 0 L6 44" stroke="currentColor"/>
+        <path d="M3 41 L6 44 L9 41" stroke="currentColor"/>
+      </svg>
+    </div>
+    {{ end }}
+  </div>
+
+  {{/* Connector trunk — horizontal line meeting all three drops */}}
+  <div class="hidden md:block relative -mt-px">
+    <div class="absolute left-[2%] right-[2%] top-0 h-px bg-hairline-strong"></div>
+  </div>
+
+  {{/* Platform tier — Encoach.ai as the workforce enablement layer */}}
+  <div class="mt-10 md:mt-12 border border-hairline-strong bg-paper">
+    <div class="px-6 py-6 sm:px-8 sm:py-7 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+      <div>
+        <p class="dgm-label">The platform</p>
+        <p class="mt-2 font-display text-ink text-xl md:text-2xl">Encoach.ai — workforce enablement layer</p>
+      </div>
+      <p class="text-sm text-slate-500 italic max-w-sm sm:text-right">
+        Connecting students, institutions, and corporates around AI-enabled
+        finance operations.
+      </p>
+    </div>
+  </div>
+
+</div>

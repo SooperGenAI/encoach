@@ -6,49 +6,56 @@
        aria-hidden="true"></div>
 
   <div class="relative container-default py-24 md:py-32 lg:py-40">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-y-14 lg:gap-x-16">
 
-      {{/* Left — H+AI thesis as editorial prose, leading into Memintel */}}
-      <div class="lg:col-span-7">
+    {{/* Argument — eyebrow + headline + prose */}}
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-y-10 lg:gap-x-16">
+      <div class="lg:col-span-5">
         {{ with $d.eyebrow }}
         <p class="text-2xs font-medium uppercase tracking-[0.2em] text-teal-400">{{ . }}</p>
         {{ end }}
         <h2 class="mt-5 font-display text-canvas font-normal leading-[1.1] tracking-[-0.02em]
-                   text-3xl sm:text-4xl md:text-5xl max-w-3xl">
+                   text-3xl sm:text-4xl md:text-5xl max-w-xl">
           {{ $d.headline }}
         </h2>
-
-        <div class="mt-10 max-w-2xl space-y-6 text-base md:text-lg leading-relaxed text-slate-300">
+      </div>
+      <div class="lg:col-span-7 lg:pt-3">
+        <div class="max-w-2xl space-y-6 text-base md:text-lg leading-relaxed text-slate-300">
           {{ range $d.paragraphs }}
             <p>{{ . }}</p>
           {{ end }}
         </div>
       </div>
+    </div>
 
-      {{/* Right — Memintel-Canvas capabilities as a quiet typographic list */}}
-      <div class="lg:col-span-5 lg:pt-4">
-        <div class="lg:pl-6 lg:border-l lg:border-white/10">
-          {{ with $d.capabilities_label }}
-          <p class="text-2xs font-medium uppercase tracking-[0.2em] text-slate-400">{{ . }}</p>
-          {{ end }}
-          {{ with $d.capabilities }}
-          <ul class="mt-6 space-y-3 text-base text-canvas">
-            {{ range . }}
-            <li class="leading-snug">{{ . }}</li>
-            {{ end }}
-          </ul>
-          {{ end }}
-          {{ with $d.cta }}
-          <a href="{{ .url | relURL }}"
-             class="mt-10 inline-flex items-center gap-2 text-sm font-medium text-canvas border-b border-teal-400/40 pb-1 hover:border-teal-400 transition-colors">
-            {{ .label }}
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-          {{ end }}
-        </div>
+    {{/* Supervisory chain diagram — section visual climax */}}
+    <div class="mt-20 md:mt-24 lg:mt-28 max-w-4xl mx-auto">
+      {{ partial "diagrams/supervisory-chain.html" . }}
+    </div>
+
+    {{/* Memintel-Canvas attribution + CTA */}}
+    <div class="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-12 gap-y-6 md:gap-x-10 items-end border-t border-white/10 pt-10">
+      <div class="md:col-span-7">
+        {{ with $d.capabilities_label }}
+        <p class="text-2xs font-medium uppercase tracking-[0.2em] text-slate-400">{{ . }}</p>
+        {{ end }}
+        <p class="mt-3 text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl">
+          The pattern above is the operating model students experience first-hand
+          on Memintel-Canvas — Encoach.ai's AI-enabled accounting administration
+          platform.
+        </p>
+      </div>
+      <div class="md:col-span-5 md:text-right">
+        {{ with $d.cta }}
+        <a href="{{ .url | relURL }}"
+           class="inline-flex items-center gap-2 text-sm font-medium text-canvas border-b border-teal-400/40 pb-1 hover:border-teal-400 transition-colors">
+          {{ .label }}
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        {{ end }}
       </div>
     </div>
+
   </div>
 </section>
