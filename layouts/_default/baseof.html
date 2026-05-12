@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="{{ site.Language.Lang | default "en" }}" class="scroll-smooth">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="min-h-screen flex flex-col bg-paper text-ink antialiased">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-ink focus:text-canvas focus:px-3 focus:py-2 focus:rounded">
+      Skip to content
+    </a>
+
+    {{ partial "header.html" . }}
+
+    <main id="main" class="flex-1">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+  </body>
+</html>

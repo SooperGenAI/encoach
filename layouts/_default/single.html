@@ -1,0 +1,15 @@
+{{ define "main" }}
+<article class="section">
+  <div class="container-narrow">
+    <header class="mb-12">
+      {{ with .Params.eyebrow }}<p class="eyebrow mb-4">{{ . }}</p>{{ end }}
+      <h1 class="h-section">{{ .Title }}</h1>
+      {{ with .Params.lead }}<p class="lead mt-6 max-w-2xl">{{ . }}</p>{{ end }}
+    </header>
+
+    <div class="prose-content text-slate-700 leading-relaxed">
+      {{ .Content }}
+    </div>
+  </div>
+</article>
+{{ end }}

@@ -1,0 +1,44 @@
+{{- $nav := hugo.Data.nav -}}
+<header class="sticky top-0 z-40 bg-paper/85 backdrop-blur border-b border-hairline">
+  <div class="container-default flex items-center justify-between h-16">
+    <a href="{{ "/" | relURL }}" class="flex items-center gap-2.5 group" aria-label="Encoach.ai — Home">
+      {{ partial "logo.html" . }}
+      <span class="font-display text-lg tracking-tight text-ink">Encoach<span class="text-teal-600">.ai</span></span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-7 xl:gap-9" aria-label="Primary">
+      {{ range $nav.primary }}
+        {{- $current := eq $.RelPermalink (relURL .url) -}}
+        <a href="{{ .url | relURL }}"
+           class="text-sm transition-colors {{ if $current }}text-ink font-medium{{ else }}text-slate-600 hover:text-ink{{ end }}">
+          {{ .label }}
+        </a>
+      {{ end }}
+    </nav>
+
+    <div class="hidden lg:flex items-center">
+      {{ with $nav.cta }}
+      <a href="{{ .url | relURL }}" class="btn btn-secondary">{{ .label }}</a>
+      {{ end }}
+    </div>
+
+    {{/* Mobile menu trigger — CSS-only via :target */}}
+    <a href="#mobile-menu" class="lg:hidden inline-flex items-center justify-center w-10 h-10 -mr-2 text-ink" aria-label="Open menu">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+        <path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </a>
+  </div>
+
+  {{/* Mobile menu panel */}}
+  <div id="mobile-menu" class="lg:hidden hidden target:block border-t border-hairline bg-paper">
+    <div class="container-default py-6 flex flex-col gap-4">
+      {{ range $nav.primary }}
+        <a href="{{ .url | relURL }}" class="text-base text-slate-800 hover:text-ink">{{ .label }}</a>
+      {{ end }}
+      {{ with $nav.cta }}
+        <a href="{{ .url | relURL }}" class="btn btn-secondary mt-3 self-start">{{ .label }}</a>
+      {{ end }}
+    </div>
+  </div>
+</header>

@@ -1,0 +1,14 @@
+{
+  "name": "encoach-website",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Encoach.ai institutional website — Hugo + Tailwind v4",
+  "scripts": {
+    "dev": "hugo server --buildDrafts --disableFastRender",
+    "build": "hugo --gc --minify",
+    "clean": "rimraf public resources"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0"
+  }
+}

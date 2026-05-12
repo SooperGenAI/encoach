@@ -1,0 +1,10 @@
+{{ define "main" }}
+  {{ $home := hugo.Data.home }}
+
+  {{ partial "sections/hero.html"            (dict "ctx" . "data" $home.hero) }}
+  {{ partial "sections/shift.html"           (dict "ctx" . "data" $home.shift) }}
+  {{ partial "sections/model.html"           (dict "ctx" . "data" $home.model) }}
+  {{ partial "sections/operating-model.html" (dict "ctx" . "data" $home.operating_model) }}
+  {{ partial "sections/ecosystem.html"       (dict "ctx" . "data" $home.ecosystem) }}
+  {{ partial "sections/closing.html"         (dict "ctx" . "data" $home.closing) }}
+{{ end }}

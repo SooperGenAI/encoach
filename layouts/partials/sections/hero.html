@@ -1,0 +1,31 @@
+{{- $d := .data -}}
+<section class="bg-canvas border-b border-hairline">
+  <div class="container-default pt-28 pb-28 md:pt-36 md:pb-36 lg:pt-48 lg:pb-48">
+    <div class="max-w-4xl">
+      <h1 class="font-display text-ink font-normal leading-[1.1] lg:leading-[1.05] tracking-[-0.02em]
+                 text-[2.25rem] sm:text-5xl md:text-6xl lg:text-7xl">
+        {{ $d.headline }}
+      </h1>
+
+      {{ with $d.subhead }}
+      <p class="mt-10 text-lg md:text-xl text-slate-700 leading-relaxed max-w-2xl">
+        {{ . }}
+      </p>
+      {{ end }}
+
+      <div class="mt-14 flex flex-wrap items-center gap-x-4 gap-y-3">
+        {{ with $d.primary_cta }}
+          <a href="{{ .url | relURL }}" class="btn btn-primary">
+            {{ .label }}
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        {{ end }}
+        {{ with $d.secondary_cta }}
+          <a href="{{ .url | relURL }}" class="btn btn-secondary">{{ .label }}</a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

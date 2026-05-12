@@ -1,0 +1,33 @@
+primary:
+  - label: About
+    url: /about/
+  - label: Programs
+    url: /programs/
+  - label: Internship
+    url: /internship/
+  - label: For Corporates
+    url: /corporates/
+  - label: Memintel-Canvas
+    url: /memintel-canvas/
+  - label: Contact
+    url: /contact/
+
+cta:
+  label: Apply for cohort
+  url: /contact/
+
+footer:
+  - heading: Platform
+    items:
+      - { label: Programs, url: /programs/ }
+      - { label: Internship, url: /internship/ }
+      - { label: Memintel-Canvas, url: /memintel-canvas/ }
+  - heading: Audiences
+    items:
+      - { label: For Students, url: /programs/ }
+      - { label: For Institutes, url: /programs/ }
+      - { label: For Corporates, url: /corporates/ }
+  - heading: Company
+    items:
+      - { label: About, url: /about/ }
+      - { label: Contact, url: /contact/ }

@@ -1,0 +1,49 @@
+{{- $d := .data -}}
+<section class="bg-canvas-soft border-t border-hairline">
+  <div class="container-default py-24 md:py-32 lg:py-40">
+
+    {{/* Opening argument — workforce gap, transitions into the model */}}
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-y-10 lg:gap-x-16">
+      <div class="lg:col-span-5">
+        {{ with $d.eyebrow }}
+        <p class="text-2xs font-medium uppercase tracking-[0.2em] text-slate-500">{{ . }}</p>
+        {{ end }}
+        <h2 class="mt-5 font-display text-ink font-normal leading-[1.1] tracking-[-0.02em]
+                   text-3xl sm:text-4xl md:text-5xl">
+          {{ $d.headline }}
+        </h2>
+      </div>
+      <div class="lg:col-span-7 lg:pt-3">
+        <div class="max-w-2xl space-y-6 text-base md:text-lg leading-relaxed text-slate-700">
+          {{ range $d.intro }}
+            <p>{{ . }}</p>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+    {{/* Three pillars as editorial numbered list — no grid, full vertical rhythm */}}
+    {{ with $d.pillars }}
+    <ol class="mt-20 md:mt-28 border-t border-hairline">
+      {{ range $i, $p := . }}
+      <li class="grid grid-cols-12 gap-x-6 lg:gap-x-10 py-12 md:py-16 border-b border-hairline last:border-b-0">
+        <div class="col-span-12 md:col-span-2 lg:col-span-2">
+          <p class="font-mono text-xs text-slate-500 tracking-[0.08em]">
+            {{ printf "%02d" (add $i 1) }}
+          </p>
+        </div>
+        <div class="col-span-12 md:col-span-10 lg:col-span-9 lg:col-start-3">
+          <h3 class="font-display text-ink font-normal leading-[1.2] tracking-[-0.015em]
+                     text-2xl md:text-3xl max-w-2xl">
+            {{ $p.title }}
+          </h3>
+          <p class="mt-5 text-base md:text-lg leading-relaxed text-slate-700 max-w-2xl">
+            {{ $p.body }}
+          </p>
+        </div>
+      </li>
+      {{ end }}
+    </ol>
+    {{ end }}
+  </div>
+</section>

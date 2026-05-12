@@ -1,0 +1,31 @@
+{{- $ctx := .ctx -}}
+{{- $title := .title -}}
+{{- $description := .description -}}
+{{- $ogImage := absURL (site.Params.ogImage | default "/og-default.png") -}}
+{{- $url := $ctx.Permalink -}}
+
+{{/* Open Graph */}}
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="{{ site.Title }}" />
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $description }}" />
+<meta property="og:url" content="{{ $url }}" />
+<meta property="og:image" content="{{ $ogImage }}" />
+<meta property="og:locale" content="en_IN" />
+
+{{/* Twitter Card */}}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ $title }}" />
+<meta name="twitter:description" content="{{ $description }}" />
+<meta name="twitter:image" content="{{ $ogImage }}" />
+
+{{/* Structured data — Organization */}}
+{{- $org := dict
+  "@context" "https://schema.org"
+  "@type" "Organization"
+  "name" site.Params.brand.legalName
+  "url" site.BaseURL
+  "description" site.Params.description
+  "email" site.Params.contact.email
+-}}
+<script type="application/ld+json">{{ $org | jsonify (dict "indent" "  ") | safeJS }}</script>

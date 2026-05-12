@@ -1,0 +1,46 @@
+baseURL = "https://encoach.ai/"
+languageCode = "en-IN"
+defaultContentLanguage = "en"
+title = "Encoach.ai — Workforce preparation for AI-enabled finance operations"
+enableRobotsTXT = true
+enableGitInfo = false
+canonifyURLs = false
+disableKinds = ["taxonomy", "term"]
+timeout = "60s"
+
+[build]
+  writeStats = false
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+
+[params]
+  description = "Encoach.ai trains accounting and finance professionals for workflow-driven, AI-assisted finance environments through practical operational training, workflow exposure, and structured corporate internships."
+  ogImage = "/og-default.png"
+  themeColor = "#0A1628"
+
+[params.brand]
+  legalName = "Encoach.ai"
+  shortName = "Encoach"
+  tagline = "Workforce preparation for AI-enabled finance operations."
+
+[params.contact]
+  email = "hello@encoach.ai"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.6
+  filename = "sitemap.xml"

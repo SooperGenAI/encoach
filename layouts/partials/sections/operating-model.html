@@ -1,0 +1,54 @@
+{{- $d := .data -}}
+<section class="relative overflow-hidden bg-ink text-slate-200">
+  {{/* The single deliberate textured surface on the page */}}
+  <div class="absolute inset-0 pointer-events-none opacity-[0.05]"
+       style="background-image: linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px); background-size: 96px 96px;"
+       aria-hidden="true"></div>
+
+  <div class="relative container-default py-24 md:py-32 lg:py-40">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-y-14 lg:gap-x-16">
+
+      {{/* Left — H+AI thesis as editorial prose, leading into Memintel */}}
+      <div class="lg:col-span-7">
+        {{ with $d.eyebrow }}
+        <p class="text-2xs font-medium uppercase tracking-[0.2em] text-teal-400">{{ . }}</p>
+        {{ end }}
+        <h2 class="mt-5 font-display text-canvas font-normal leading-[1.1] tracking-[-0.02em]
+                   text-3xl sm:text-4xl md:text-5xl max-w-3xl">
+          {{ $d.headline }}
+        </h2>
+
+        <div class="mt-10 max-w-2xl space-y-6 text-base md:text-lg leading-relaxed text-slate-300">
+          {{ range $d.paragraphs }}
+            <p>{{ . }}</p>
+          {{ end }}
+        </div>
+      </div>
+
+      {{/* Right — Memintel-Canvas capabilities as a quiet typographic list */}}
+      <div class="lg:col-span-5 lg:pt-4">
+        <div class="lg:pl-6 lg:border-l lg:border-white/10">
+          {{ with $d.capabilities_label }}
+          <p class="text-2xs font-medium uppercase tracking-[0.2em] text-slate-400">{{ . }}</p>
+          {{ end }}
+          {{ with $d.capabilities }}
+          <ul class="mt-6 space-y-3 text-base text-canvas">
+            {{ range . }}
+            <li class="leading-snug">{{ . }}</li>
+            {{ end }}
+          </ul>
+          {{ end }}
+          {{ with $d.cta }}
+          <a href="{{ .url | relURL }}"
+             class="mt-10 inline-flex items-center gap-2 text-sm font-medium text-canvas border-b border-teal-400/40 pb-1 hover:border-teal-400 transition-colors">
+            {{ .label }}
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
