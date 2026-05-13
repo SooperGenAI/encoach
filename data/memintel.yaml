@@ -6,6 +6,9 @@ hero:
     Encoach.ai students train on Memintel-Canvas. Not a learning
     sandbox — the same class of platform defining modern AI-enabled
     finance administration.
+  primary_cta:
+    label: Learn about Memintel
+    url: https://memintel.com
   image: /uploads/illustrations/cuate/collaboration.svg
 
 sections:
